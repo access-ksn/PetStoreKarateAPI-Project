@@ -1,0 +1,21 @@
+<testsuite failures="0" name="src/test/java/examples/users/randomemail.feature" skipped="0" tests="1" time="2.351204">
+  <testcase classname="src.test.java.examples.users.randomemail" name="Create a user with the given request payload" time="2.351204">
+    <system-out>* url baseURL ............................................................. passed
+* def random_string = ..................................................... passed
+* def randomString = random_string(10) .................................... passed
+* print randomString ...................................................... passed
+* header Authorization = 'Bearer ' + tokenID .............................. passed
+* def reqPayLoad = ........................................................ passed
+* reqPayLoad.email = randomString + "@gmail.com" .......................... passed
+* print reqPayLoad ........................................................ passed
+Given path '/public/v1/users' ............................................. passed
+And request reqPayLoad .................................................... passed
+When method POST .......................................................... passed
+Then status 201 ........................................................... passed
+* def jsonResp = response ................................................. passed
+* print jsonResp .......................................................... passed
+* match jsonResp.data.id == '#present' .................................... passed
+* match jsonResp.data.name == '#present' .................................. passed
+* match jsonResp.data.email == reqPayLoad.email ........................... passed</system-out>
+  </testcase>
+</testsuite>

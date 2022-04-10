@@ -1,0 +1,8 @@
+<testsuite failures="0" name="src/test/java/examples/users/firstExample.feature" skipped="0" tests="1" time="0.006939">
+  <testcase classname="src.test.java.examples.users.firstExample" name="declare and print variables" time="0.006939">
+    <system-out>* def balance = 200 ....................................................... passed
+* def fee = 20 ............................................................ passed
+* def tax = 10 ............................................................ passed
+* print 'total amount --&gt;' + (balance + fee + tax) ........................ passed</system-out>
+  </testcase>
+</testsuite>

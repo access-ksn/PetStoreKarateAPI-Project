@@ -1,0 +1,28 @@
+<testsuite failures="0" name="src/test/java/examples/users/json.feature" skipped="0" tests="3" time="0.042858">
+  <testcase classname="src.test.java.examples.users.json" name="Print variables" time="0.033928">
+    <system-out>* def balance = 200 ....................................................... passed
+* def fee = 30 ............................................................ passed
+* def tax = 45 ............................................................ passed
+* print 'Total amount --&gt;' + (balance + fee + tax) ........................ passed</system-out>
+  </testcase>
+  <testcase classname="src.test.java.examples.users.json" name="Calculate the product" time="0.005093">
+    <system-out>* def balance = 200 ....................................................... passed
+* def fee = 30 ............................................................ passed
+* def tax = 45 ............................................................ passed
+* print 'Total amount --&gt;' + (balance + fee + tax) ........................ passed
+* def a = 200 ............................................................. passed
+* def b = 30 .............................................................. passed
+* print 'Product value  --&gt;' + (a * b) .................................... passed</system-out>
+  </testcase>
+  <testcase classname="src.test.java.examples.users.json" name="Print Json reader parser" time="0.003836">
+    <system-out>* def balance = 200 ....................................................... passed
+* def fee = 30 ............................................................ passed
+* def tax = 45 ............................................................ passed
+* print 'Total amount --&gt;' + (balance + fee + tax) ........................ passed
+* def a = 200 ............................................................. passed
+* def b = 30 .............................................................. passed
+* print 'Product value  --&gt;' + (a * b) .................................... passed
+* def persons = ........................................................... passed
+* print persons ........................................................... passed</system-out>
+  </testcase>
+</testsuite>

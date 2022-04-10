@@ -1,0 +1,12 @@
+<testsuite failures="0" name="src/test/java/examples/users/getAPIAuthtoken.feature" skipped="0" tests="1" time="1.840004">
+  <testcase classname="src.test.java.examples.users.getAPIAuthtoken" name="print authentincation token" time="1.840004">
+    <system-out>* print tokenID ........................................................... passed
+Given header Authorization = 'Bearer '+ tokenID ........................... passed
+Given url baseURL+'/public/v1/users/' ..................................... passed
+And path '21' ............................................................. passed
+When method GET ........................................................... passed
+Then status 200 ........................................................... passed
+* def jsonResp = response ................................................. passed
+* print jsonResp .......................................................... passed</system-out>
+  </testcase>
+</testsuite>

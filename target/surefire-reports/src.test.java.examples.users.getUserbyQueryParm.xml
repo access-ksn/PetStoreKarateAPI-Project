@@ -1,0 +1,41 @@
+<testsuite failures="0" name="src/test/java/examples/users/getUserbyQueryParm.feature" skipped="0" tests="2" time="2.713231">
+  <testcase classname="src.test.java.examples.users.getUserbyQueryParm" name="get the user by query param" time="1.634407">
+    <system-out>* def query = {status:'active', gender: 'male', id:20} .................... passed
+Given url baseURL+'/public/v1/users' ...................................... passed
+And params query .......................................................... passed
+When method GET ........................................................... passed
+Then status 200 ........................................................... passed
+Then print response ....................................................... passed
+* def jsonResp = response ................................................. passed
+* print jsonResp .......................................................... passed
+* def status = jsonResp.data[0].status .................................... passed
+* def gender = jsonResp.data[0].gender .................................... passed
+* match status == 'active' ................................................ passed
+* match gender == 'male' .................................................. passed</system-out>
+  </testcase>
+  <testcase classname="src.test.java.examples.users.getUserbyQueryParm" name="get all the users and get the count" time="1.078824">
+    <system-out>* def query = {status:'active', gender: 'male', id:20} .................... passed
+Given url baseURL+'/public/v1/users' ...................................... passed
+And params query .......................................................... passed
+When method GET ........................................................... passed
+Then status 200 ........................................................... passed
+Then print response ....................................................... passed
+* def jsonResp = response ................................................. passed
+* print jsonResp .......................................................... passed
+* def status = jsonResp.data[0].status .................................... passed
+* def gender = jsonResp.data[0].gender .................................... passed
+* match status == 'active' ................................................ passed
+* match gender == 'male' .................................................. passed
+* def query = {status:'active'} ........................................... passed
+Given url baseURL+'/public/v1/users' ...................................... passed
+And params query .......................................................... passed
+When method GET ........................................................... passed
+Then status 200 ........................................................... passed
+Then print response ....................................................... passed
+* def jsonResp = response ................................................. passed
+* print jsonResp .......................................................... passed
+* def userCount = jsonResp.data.length .................................... passed
+* print userCount ......................................................... passed
+* match userCount ==20 .................................................... passed</system-out>
+  </testcase>
+</testsuite>

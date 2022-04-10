@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+<meta charset="utf-8">
+    
+<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+    
+<link href="res/bootstrap.min.css" rel="stylesheet" type="text/css">
+    
+<link href="res/karate-report.css" rel="stylesheet" type="text/css">
+    
+<link href="favicon.ico" rel="shortcut icon">
+    
+<script src="res/jquery.min.js" type="text/javascript"></script>
+    <script src="res/jquery.tablesorter.min.js" type="text/javascript"></script>
+    <script src="res/bootstrap.min.js" type="text/javascript"></script>
+    <script src="res/karate-report.js" type="text/javascript"></script>
+    
+<title>examples.users.getAPI</title>
+  
+</head>
+  
+<body>
+    
+<div id="root-container">
+      
+<div id="leftnav">
+        
+<div class="nav-logo">
+          
+<a href="karate-summary.html">
+            <img alt="Karate" src="res/karate-logo.svg">
+          </a>
+          
+<div class="nav-count">
+            
+<div class="bg-success" id="nav-pass">2</div>
+            
+<div class="bg-danger" id="nav-fail">0</div>
+          
+</div>
+        
+</div>
+        
+<div id="nav-type">Scenarios</div>         
+        
+<div id="nav-date">2022-04-09 07:08:22 PM</div>        
+      
+<div class="nav-container">
+<div class="nav-item passed">
+<a href="#[1:8]">[1:8] retrieve user using get call </a>
+</div>
+<div class="nav-item passed">
+<a href="#[2:24]">[2:24] retrieve users using get call </a>
+</div>
+</div>
+</div>
+      
+<div id="content">
+      
+<div class="page-heading alert alert-primary">
+<a href="karate-summary.html">Summary</a><span class="feature-label">|</span><a href="karate-tags.html">Tags</a><span class="feature-label">|</span><span class="feature-label">Feature:</span><span class="feature-name">examples/users/getAPI.feature</span><span class="feature-description">Get API details</span>
+</div>
+<div class="scenario">
+<div class="scenario-heading" id="[1:8]">
+<div class="heading-container">
+<div class="scenario-tags"></div>
+<span class="scenario-keyword">Scenario: [1:8]</span><span class="scenario-name">retrieve user using get call </span>
+</div>
+<div class="scenario-time passed">ms: 1118</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="1">
+<div class="step-ref passed">1</div>
+<div class="step-cell passed">Given url baseURL+'/public/v1/users/'</div>
+</div>
+<div class="time-cell passed">2</div>
+</div>
+<div class="preformatted" data-parent="1">19:08:20.207 karate.env system property was:</div>
+<div class="step-row">
+<div class="step-container" id="2">
+<div class="step-ref passed">2</div>
+<div class="step-cell passed">And path '21'</div>
+</div>
+<div class="time-cell passed">1</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="3">
+<div class="step-ref passed">3</div>
+<div class="step-cell passed">When method GET</div>
+</div>
+<div class="time-cell passed">1106</div>
+</div>
+<div class="preformatted" data-parent="3">19:08:20.207 request:
+1 &gt; GET https://gorest.co.in/public/v1/users/21
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Host: gorest.co.in
+1 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_301)
+
+19:08:21.317 response time in milliseconds: 1103.98
+1 &lt; 200
+1 &lt; Cache-Control: max-age=0, private, must-revalidate
+1 &lt; Connection: keep-alive
+1 &lt; Content-Type: application/json; charset=utf-8
+1 &lt; Date: Sat, 09 Apr 2022 09:08:21 GMT
+1 &lt; ETag: W/"4d564e18cb7976b3b6bb2d24df9cb059"
+1 &lt; Referrer-Policy: strict-origin-when-cross-origin
+1 &lt; Server: nginx
+1 &lt; Strict-Transport-Security: max-age=63072000; includeSubDomains
+1 &lt; Transfer-Encoding: chunked
+1 &lt; Vary: [Accept-Encoding, Origin]
+1 &lt; X-Content-Type-Options: nosniff
+1 &lt; X-Download-Options: noopen
+1 &lt; X-Frame-Options: SAMEORIGIN
+1 &lt; X-Permitted-Cross-Domain-Policies: none
+1 &lt; X-Request-Id: e983dbba-6919-4679-b6c1-f0c3f5707c08
+1 &lt; X-Runtime: 0.004870
+1 &lt; X-XSS-Protection: 0
+{"meta":null,"data":{"id":21,"name":"Dhaanyalakshmi Sethi","email":"sethi_dhaanyalakshmi@adams.net","gender":"male","status":"inactive"}}</div>
+<div class="step-row">
+<div class="step-container" id="4">
+<div class="step-ref passed">4</div>
+<div class="step-cell passed">Then status 200</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="5">
+<div class="step-ref passed">5</div>
+<div class="step-cell passed">* def jsonResp = response</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="6">
+<div class="step-ref passed">6</div>
+<div class="step-cell passed">* print jsonResp</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="preformatted" data-parent="6">19:08:21.317 [print] {
+  "data": {
+    "gender": "male",
+    "name": "Dhaanyalakshmi Sethi",
+    "id": 21,
+    "email": "sethi_dhaanyalakshmi@adams.net",
+    "status": "inactive"
+  },
+  "meta": null
+}</div>
+<div class="step-row">
+<div class="step-container" id="7">
+<div class="step-ref passed">7</div>
+<div class="step-cell passed">* def id = jsonResp.data.id</div>
+</div>
+<div class="time-cell passed">2</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="8">
+<div class="step-ref passed">8</div>
+<div class="step-cell passed">* def name = jsonResp.data.name</div>
+</div>
+<div class="time-cell passed">1</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="9">
+<div class="step-ref passed">9</div>
+<div class="step-cell passed">* def email = jsonResp.data.email</div>
+</div>
+<div class="time-cell passed">1</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="10">
+<div class="step-ref passed">10</div>
+<div class="step-cell passed">* match id == 21</div>
+</div>
+<div class="time-cell passed">2</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="11">
+<div class="step-ref passed">11</div>
+<div class="step-cell passed">* match name == 'Dhaanyalakshmi Sethi'</div>
+</div>
+<div class="time-cell passed">1</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="12">
+<div class="step-ref passed">12</div>
+<div class="step-cell passed">* match email == 'sethi_dhaanyalakshmi@adams.net'</div>
+</div>
+<div class="time-cell passed">1</div>
+</div>
+</div>
+<div class="scenario">
+<div class="scenario-heading" id="[2:24]">
+<div class="heading-container">
+<div class="scenario-tags"></div>
+<span class="scenario-keyword">Scenario: [2:24]</span><span class="scenario-name">retrieve users using get call </span>
+</div>
+<div class="scenario-time passed">ms: 1088</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="13">
+<div class="step-ref passed">13</div>
+<div class="step-cell passed">Given url baseURL+'/public/v1/users/'</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="preformatted" data-parent="13">19:08:21.333 karate.env system property was:</div>
+<div class="step-row">
+<div class="step-container" id="14">
+<div class="step-ref passed">14</div>
+<div class="step-cell passed">And path '20'</div>
+</div>
+<div class="time-cell passed">1</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="15">
+<div class="step-ref passed">15</div>
+<div class="step-cell passed">When method GET</div>
+</div>
+<div class="time-cell passed">1083</div>
+</div>
+<div class="preformatted" data-parent="15">19:08:21.333 request:
+1 &gt; GET https://gorest.co.in/public/v1/users/20
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Host: gorest.co.in
+1 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_301)
+
+19:08:22.417 response time in milliseconds: 1081.66
+1 &lt; 200
+1 &lt; Cache-Control: max-age=0, private, must-revalidate
+1 &lt; Connection: keep-alive
+1 &lt; Content-Type: application/json; charset=utf-8
+1 &lt; Date: Sat, 09 Apr 2022 09:08:22 GMT
+1 &lt; ETag: W/"73dac689725807c66781c1d23215604e"
+1 &lt; Referrer-Policy: strict-origin-when-cross-origin
+1 &lt; Server: nginx
+1 &lt; Strict-Transport-Security: max-age=63072000; includeSubDomains
+1 &lt; Transfer-Encoding: chunked
+1 &lt; Vary: [Accept-Encoding, Origin]
+1 &lt; X-Content-Type-Options: nosniff
+1 &lt; X-Download-Options: noopen
+1 &lt; X-Frame-Options: SAMEORIGIN
+1 &lt; X-Permitted-Cross-Domain-Policies: none
+1 &lt; X-Request-Id: d7a824f8-519c-47c0-8638-970d8ef2dd66
+1 &lt; X-Runtime: 0.005809
+1 &lt; X-XSS-Protection: 0
+{"meta":null,"data":{"id":20,"name":"Prof. Jagadish Prajapat","email":"prajapat_prof_jagadish@muller-olson.io","gender":"male","status":"inactive"}}</div>
+<div class="step-row">
+<div class="step-container" id="16">
+<div class="step-ref passed">16</div>
+<div class="step-cell passed">Then status 200</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="17">
+<div class="step-ref passed">17</div>
+<div class="step-cell passed">* def jsonResp = response</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="18">
+<div class="step-ref passed">18</div>
+<div class="step-cell passed">* print jsonResp</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="preformatted" data-parent="18">19:08:22.417 [print] {
+  "data": {
+    "gender": "male",
+    "name": "Prof. Jagadish Prajapat",
+    "id": 20,
+    "email": "prajapat_prof_jagadish@muller-olson.io",
+    "status": "inactive"
+  },
+  "meta": null
+}</div>
+<div class="step-row">
+<div class="step-container" id="19">
+<div class="step-ref passed">19</div>
+<div class="step-cell passed">* def id = jsonResp.data.id</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="20">
+<div class="step-ref passed">20</div>
+<div class="step-cell passed">* def email = jsonResp.data.email</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="21">
+<div class="step-ref passed">21</div>
+<div class="step-cell passed">* def name = jsonResp.data.name</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="22">
+<div class="step-ref passed">22</div>
+<div class="step-cell passed">* match id == 20</div>
+</div>
+<div class="time-cell passed">1</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="23">
+<div class="step-ref passed">23</div>
+<div class="step-cell passed">* match name == 'Prof. Jagadish Prajapat'</div>
+</div>
+<div class="time-cell passed">1</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="24">
+<div class="step-ref passed">24</div>
+<div class="step-cell passed">* match email == 'prajapat_prof_jagadish@muller-olson.io'</div>
+</div>
+<div class="time-cell passed">1</div>
+</div>
+</div>
+</div>
+    
+</div>   
+  
+</body>
+
+</html>

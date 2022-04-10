@@ -1,0 +1,16 @@
+<testsuite failures="0" name="src/test/java/examples/users/postAPI.feature" skipped="0" tests="1" time="1.639219">
+  <testcase classname="src.test.java.examples.users.postAPI" name="Create a user with the given request payload" time="1.639219">
+    <system-out>* url baseURL ............................................................. passed
+* header Authorization = 'Bearer ' + tokenID .............................. passed
+* def reqPayLoad = ........................................................ passed
+Given path '/public/v1/users' ............................................. passed
+And request reqPayLoad .................................................... passed
+When method POST .......................................................... passed
+Then status 201 ........................................................... passed
+* def jsonResp = response ................................................. passed
+* print jsonResp .......................................................... passed
+* match jsonResp.data.id == '#present' .................................... passed
+* match jsonResp.data.name == '#present' .................................. passed
+* match jsonResp.data.email == '#present' ................................. passed</system-out>
+  </testcase>
+</testsuite>
