@@ -47,11 +47,11 @@
         
 <div id="nav-type">Scenarios</div>         
         
-<div id="nav-date">2022-04-10 08:06:20 PM</div>        
+<div id="nav-date">2022-04-11 08:12:36 PM</div>        
       
 <div class="nav-container">
 <div class="nav-item passed">
-<a href="#[1:4]">[1:4] find pet by id, update pet name and then delete petId </a>
+<a href="#[1:8]">[1:8] find pet by id, update pet name and then delete petId </a>
 </div>
 </div>
 </div>
@@ -62,12 +62,41 @@
 <a href="karate-summary.html">Summary</a><span class="feature-label">|</span><a href="karate-tags.html">Tags</a><span class="feature-label">|</span><span class="feature-label">Feature:</span><span class="feature-name">src/test/java/examples/petStore/findPetByID.feature</span><span class="feature-description">pet store API automation</span>
 </div>
 <div class="scenario">
-<div class="scenario-heading" id="[1:4]">
+<div class="scenario-heading" id="[1:8]">
 <div class="heading-container">
 <div class="scenario-tags"></div>
-<span class="scenario-keyword">Scenario: [1:4]</span><span class="scenario-name">find pet by id, update pet name and then delete petId </span>
+<span class="scenario-keyword">Scenario: [1:8]</span><span class="scenario-name">find pet by id, update pet name and then delete petId </span>
 </div>
-<div class="scenario-time passed">ms: 4251</div>
+<div class="scenario-time passed">ms: 5463</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="[1:8]bg">
+<div class="step-ref bg-step">&gt;&gt;</div>
+<div class="step-cell passed">Background:</div>
+</div>
+<div class="time-cell passed"></div>
+</div>
+<div class="step-row" data-parent="[1:8]bg">
+<div class="step-container" id="1">
+<div class="step-ref bg-step">1</div>
+<div class="step-cell passed">* url baseurl</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="preformatted" data-parent="1">20:12:30.742 karate.env system property was:</div>
+<div class="step-row" data-parent="[1:8]bg">
+<div class="step-container" id="2">
+<div class="step-ref bg-step">2</div>
+<div class="step-cell passed">* def Header = {accept: 'application/json', api_key: 'special-key'}</div>
+</div>
+<div class="time-cell passed">3</div>
+</div>
+<div class="step-row" data-parent="[1:8]bg">
+<div class="step-container" id="3">
+<div class="step-ref bg-step">3</div>
+<div class="step-cell passed">* def updateHeader = {accept: 'application/json', Content-Type: 'application/json'}</div>
+</div>
+<div class="time-cell passed">0</div>
 </div>
 <div class="step-row">
 <div class="step-container">
@@ -77,74 +106,75 @@
 <div class="time-cell comment"></div>
 </div>
 <div class="step-row">
-<div class="step-container" id="1">
-<div class="step-ref passed">1</div>
-<div class="step-cell passed">* def request_header = {accept: 'application/json', api_key: 'special-key'}</div>
-</div>
-<div class="time-cell passed">2</div>
-</div>
-<div class="preformatted" data-parent="1">20:06:16.512 karate.env system property was:</div>
-<div class="step-row">
-<div class="step-container" id="2">
-<div class="step-ref passed">2</div>
-<div class="step-cell passed">Given url baseurl+'/v2/pet/'</div>
-</div>
-<div class="time-cell passed">2</div>
-</div>
-<div class="step-row">
-<div class="step-container" id="3">
-<div class="step-ref passed">3</div>
-<div class="step-cell passed">And path '4'</div>
-</div>
-<div class="time-cell passed">1</div>
-</div>
-<div class="step-row">
 <div class="step-container" id="4">
 <div class="step-ref passed">4</div>
-<div class="step-cell passed">When method GET</div>
+<div class="step-cell passed">Given url baseurl+'/v2/pet/'</div>
 </div>
-<div class="time-cell passed">1444</div>
+<div class="time-cell passed">3</div>
 </div>
-<div class="preformatted" data-parent="4">20:06:16.965 request:
-1 &gt; GET https://petstore.swagger.io/v2/pet/4
-1 &gt; Accept-Encoding: gzip,deflate
-1 &gt; Connection: Keep-Alive
-1 &gt; Host: petstore.swagger.io
-1 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_301)
-
-20:06:17.997 response time in milliseconds: 1030.12
-1 &lt; 200
-1 &lt; Access-Control-Allow-Headers: Content-Type, api_key, Authorization
-1 &lt; Access-Control-Allow-Methods: GET, POST, DELETE, PUT
-1 &lt; Access-Control-Allow-Origin: *
-1 &lt; Connection: keep-alive
-1 &lt; Content-Type: application/json
-1 &lt; Date: Sun, 10 Apr 2022 10:06:17 GMT
-1 &lt; Server: Jetty(9.2.9.v20150224)
-1 &lt; Transfer-Encoding: chunked
-{"id":4,"category":{"id":2,"name":"Dogs"},"name":"German Shepperd","photoUrls":["string"],"tags":[{"id":2,"name":"tag2"}],"status":"available"}</div>
 <div class="step-row">
 <div class="step-container" id="5">
 <div class="step-ref passed">5</div>
-<div class="step-cell passed">Then status 200</div>
+<div class="step-cell passed">And path '4'</div>
 </div>
-<div class="time-cell passed">0</div>
+<div class="time-cell passed">2</div>
 </div>
 <div class="step-row">
 <div class="step-container" id="6">
 <div class="step-ref passed">6</div>
-<div class="step-cell passed">* def petResp = response</div>
+<div class="step-cell passed">And headers Header</div>
 </div>
 <div class="time-cell passed">0</div>
 </div>
 <div class="step-row">
 <div class="step-container" id="7">
 <div class="step-ref passed">7</div>
-<div class="step-cell passed">* print petResp</div>
+<div class="step-cell passed">When method GET</div>
+</div>
+<div class="time-cell passed">2006</div>
+</div>
+<div class="preformatted" data-parent="7">20:12:31.430 request:
+1 &gt; GET https://petstore.swagger.io/v2/pet/4
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Host: petstore.swagger.io
+1 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_301)
+1 &gt; accept: application/json
+1 &gt; api_key: special-key
+
+20:12:32.822 response time in milliseconds: 1379.85
+1 &lt; 200
+1 &lt; Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 &lt; Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Connection: keep-alive
+1 &lt; Content-Type: application/json
+1 &lt; Date: Mon, 11 Apr 2022 10:12:32 GMT
+1 &lt; Server: Jetty(9.2.9.v20150224)
+1 &lt; Transfer-Encoding: chunked
+{"id":4,"category":{"id":2,"name":"Dogs"},"name":"German Shepperd","photoUrls":["string"],"tags":[{"id":2,"name":"tag2"}],"status":"available"}</div>
+<div class="step-row">
+<div class="step-container" id="8">
+<div class="step-ref passed">8</div>
+<div class="step-cell passed">Then status 200</div>
 </div>
 <div class="time-cell passed">0</div>
 </div>
-<div class="preformatted" data-parent="7">20:06:17.997 [print] {
+<div class="step-row">
+<div class="step-container" id="9">
+<div class="step-ref passed">9</div>
+<div class="step-cell passed">* def getpetResp = response</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="10">
+<div class="step-ref passed">10</div>
+<div class="step-cell passed">* print getpetResp</div>
+</div>
+<div class="time-cell passed">1</div>
+</div>
+<div class="preformatted" data-parent="10">20:12:32.822 [print] {
   "photoUrls": [
     "string"
   ],
@@ -170,26 +200,18 @@
 <div class="time-cell comment"></div>
 </div>
 <div class="step-row">
-<div class="step-container" id="8">
-<div class="step-ref passed">8</div>
-<div class="step-cell passed">* def petID = petResp.id</div>
+<div class="step-container" id="11">
+<div class="step-ref passed">11</div>
+<div class="step-cell passed">* def petID = getpetResp.id</div>
 </div>
-<div class="time-cell passed">4</div>
+<div class="time-cell passed">16</div>
 </div>
 <div class="step-row">
-<div class="step-container" id="9">
-<div class="step-ref passed">9</div>
-<div class="step-cell passed">* print "Id of the pet is " +petID</div>
-</div>
-<div class="time-cell passed">1</div>
-</div>
-<div class="preformatted" data-parent="9">20:06:17.997 [print] Id of the pet is 4</div>
-<div class="step-row">
-<div class="step-container" id="10">
-<div class="step-ref passed">10</div>
+<div class="step-container" id="12">
+<div class="step-ref passed">12</div>
 <div class="step-cell passed">* match petID == 4</div>
 </div>
-<div class="time-cell passed">2</div>
+<div class="time-cell passed">10</div>
 </div>
 <div class="step-row">
 <div class="step-container">
@@ -199,44 +221,44 @@
 <div class="time-cell comment"></div>
 </div>
 <div class="step-row">
-<div class="step-container" id="11">
-<div class="step-ref passed">11</div>
+<div class="step-container" id="13">
+<div class="step-ref passed">13</div>
 <div class="step-cell passed">* def reqBody =</div>
 </div>
 <div class="time-cell passed">0</div>
 </div>
-<div class="preformatted" data-parent="11">{
-    "category": {
-        "id": 2,
-        "name": "Dogs"
-    },
-    "name": "Pitbull",
-    "photoUrls": [
-        "string"
-    ],
-    "tags": [
-        {
-            "id": 3,
-            "name": "tag3"
-        }
-    ],
-    "status": "available"
+<div class="preformatted" data-parent="13">{
+"category": {
+    "id": 2,
+    "name": "Dogs"
+},
+"name": "Pitbull",
+"photoUrls": [
+    "string"
+],
+"tags": [
+    {
+        "id": 3,
+        "name": "tag3"
+    }
+],
+"status": "available"
 }</div>
 <div class="step-row">
-<div class="step-container" id="12">
-<div class="step-ref passed">12</div>
+<div class="step-container" id="14">
+<div class="step-ref passed">14</div>
 <div class="step-cell passed">* reqBody.id = petID</div>
 </div>
-<div class="time-cell passed">4</div>
+<div class="time-cell passed">17</div>
 </div>
 <div class="step-row">
-<div class="step-container" id="13">
-<div class="step-ref passed">13</div>
+<div class="step-container" id="15">
+<div class="step-ref passed">15</div>
 <div class="step-cell passed">* print reqBody</div>
 </div>
-<div class="time-cell passed">0</div>
+<div class="time-cell passed">1</div>
 </div>
-<div class="preformatted" data-parent="13">20:06:17.997 [print] {
+<div class="preformatted" data-parent="15">20:12:32.869 [print] {
   "category": {
     "id": 2,
     "name": "Dogs"
@@ -255,34 +277,34 @@
   "id": 4
 }</div>
 <div class="step-row">
-<div class="step-container" id="14">
-<div class="step-ref passed">14</div>
-<div class="step-cell passed">* def request_header = {accept: 'application/json', Content-Type: 'application/json'}</div>
+<div class="step-container" id="16">
+<div class="step-ref passed">16</div>
+<div class="step-cell passed">Given url baseurl+'/v2/pet'</div>
+</div>
+<div class="time-cell passed">7</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="17">
+<div class="step-ref passed">17</div>
+<div class="step-cell passed">And headers updateHeader</div>
 </div>
 <div class="time-cell passed">0</div>
 </div>
 <div class="step-row">
-<div class="step-container" id="15">
-<div class="step-ref passed">15</div>
-<div class="step-cell passed">Given url baseurl+'/v2/pet'</div>
-</div>
-<div class="time-cell passed">2</div>
-</div>
-<div class="step-row">
-<div class="step-container" id="16">
-<div class="step-ref passed">16</div>
+<div class="step-container" id="18">
+<div class="step-ref passed">18</div>
 <div class="step-cell passed">And request reqBody</div>
 </div>
 <div class="time-cell passed">0</div>
 </div>
 <div class="step-row">
-<div class="step-container" id="17">
-<div class="step-ref passed">17</div>
+<div class="step-container" id="19">
+<div class="step-ref passed">19</div>
 <div class="step-cell passed">When method PUT</div>
 </div>
-<div class="time-cell passed">928</div>
+<div class="time-cell passed">1196</div>
 </div>
-<div class="preformatted" data-parent="17">20:06:18.012 request:
+<div class="preformatted" data-parent="19">20:12:32.884 request:
 2 &gt; PUT https://petstore.swagger.io/v2/pet
 2 &gt; Accept-Encoding: gzip,deflate
 2 &gt; Connection: Keep-Alive
@@ -290,41 +312,42 @@
 2 &gt; Content-Type: application/json; charset=UTF-8
 2 &gt; Host: petstore.swagger.io
 2 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_301)
+2 &gt; accept: application/json
 {"category":{"id":2,"name":"Dogs"},"name":"Pitbull","photoUrls":["string"],"tags":[{"id":3,"name":"tag3"}],"status":"available","id":4}
 
-20:06:18.935 response time in milliseconds: 923.01
+20:12:34.079 response time in milliseconds: 1181.67
 2 &lt; 200
 2 &lt; Access-Control-Allow-Headers: Content-Type, api_key, Authorization
 2 &lt; Access-Control-Allow-Methods: GET, POST, DELETE, PUT
 2 &lt; Access-Control-Allow-Origin: *
 2 &lt; Connection: keep-alive
 2 &lt; Content-Type: application/json
-2 &lt; Date: Sun, 10 Apr 2022 10:06:18 GMT
+2 &lt; Date: Mon, 11 Apr 2022 10:12:33 GMT
 2 &lt; Server: Jetty(9.2.9.v20150224)
 2 &lt; Transfer-Encoding: chunked
 {"id":4,"category":{"id":2,"name":"Dogs"},"name":"Pitbull","photoUrls":["string"],"tags":[{"id":3,"name":"tag3"}],"status":"available"}</div>
 <div class="step-row">
-<div class="step-container" id="18">
-<div class="step-ref passed">18</div>
+<div class="step-container" id="20">
+<div class="step-ref passed">20</div>
 <div class="step-cell passed">Then status 200</div>
 </div>
 <div class="time-cell passed">0</div>
 </div>
 <div class="step-row">
-<div class="step-container" id="19">
-<div class="step-ref passed">19</div>
-<div class="step-cell passed">* def petResp = response</div>
+<div class="step-container" id="21">
+<div class="step-ref passed">21</div>
+<div class="step-cell passed">* def putpetResp = response</div>
 </div>
 <div class="time-cell passed">0</div>
 </div>
 <div class="step-row">
-<div class="step-container" id="20">
-<div class="step-ref passed">20</div>
-<div class="step-cell passed">* print petResp</div>
+<div class="step-container" id="22">
+<div class="step-ref passed">22</div>
+<div class="step-cell passed">* print putpetResp</div>
 </div>
-<div class="time-cell passed">0</div>
+<div class="time-cell passed">1</div>
 </div>
-<div class="preformatted" data-parent="20">20:06:18.935 [print] {
+<div class="preformatted" data-parent="22">20:12:34.080 [print] {
   "photoUrls": [
     "string"
   ],
@@ -343,11 +366,11 @@
   "status": "available"
 }</div>
 <div class="step-row">
-<div class="step-container" id="21">
-<div class="step-ref passed">21</div>
-<div class="step-cell passed">* match petResp.name == 'Pitbull'</div>
+<div class="step-container" id="23">
+<div class="step-ref passed">23</div>
+<div class="step-cell passed">* match putpetResp.name == 'Pitbull'</div>
 </div>
-<div class="time-cell passed">2</div>
+<div class="time-cell passed">7</div>
 </div>
 <div class="step-row">
 <div class="step-container">
@@ -357,74 +380,83 @@
 <div class="time-cell comment"></div>
 </div>
 <div class="step-row">
-<div class="step-container" id="22">
-<div class="step-ref passed">22</div>
+<div class="step-container" id="24">
+<div class="step-ref passed">24</div>
 <div class="step-cell passed">* def request_header = {accept: 'application/json'}</div>
 </div>
 <div class="time-cell passed">0</div>
 </div>
 <div class="step-row">
-<div class="step-container" id="23">
-<div class="step-ref passed">23</div>
-<div class="step-cell passed">Given url baseurl+'/v2/pet/'+petID</div>
-</div>
-<div class="time-cell passed">2</div>
-</div>
-<div class="step-row">
-<div class="step-container" id="24">
-<div class="step-ref passed">24</div>
-<div class="step-cell passed">When method DELETE</div>
-</div>
-<div class="time-cell passed">925</div>
-</div>
-<div class="preformatted" data-parent="24">20:06:18.935 request:
-3 &gt; DELETE https://petstore.swagger.io/v2/pet/4
-3 &gt; Accept-Encoding: gzip,deflate
-3 &gt; Connection: Keep-Alive
-3 &gt; Host: petstore.swagger.io
-3 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_301)
-
-20:06:19.856 response time in milliseconds: 921.90
-3 &lt; 200
-3 &lt; Access-Control-Allow-Headers: Content-Type, api_key, Authorization
-3 &lt; Access-Control-Allow-Methods: GET, POST, DELETE, PUT
-3 &lt; Access-Control-Allow-Origin: *
-3 &lt; Connection: keep-alive
-3 &lt; Content-Type: application/json
-3 &lt; Date: Sun, 10 Apr 2022 10:06:19 GMT
-3 &lt; Server: Jetty(9.2.9.v20150224)
-3 &lt; Transfer-Encoding: chunked
-{"code":200,"type":"unknown","message":"4"}</div>
-<div class="step-row">
 <div class="step-container" id="25">
 <div class="step-ref passed">25</div>
-<div class="step-cell passed">Then status 200</div>
+<div class="step-cell passed">Given url baseurl+'/v2/pet/'+petID</div>
 </div>
-<div class="time-cell passed">0</div>
+<div class="time-cell passed">7</div>
 </div>
 <div class="step-row">
 <div class="step-container" id="26">
 <div class="step-ref passed">26</div>
-<div class="step-cell passed">* def petResp = response</div>
+<div class="step-cell passed">And headers Header</div>
 </div>
 <div class="time-cell passed">0</div>
 </div>
 <div class="step-row">
 <div class="step-container" id="27">
 <div class="step-ref passed">27</div>
-<div class="step-cell passed">* print petResp</div>
+<div class="step-cell passed">When method DELETE</div>
+</div>
+<div class="time-cell passed">1085</div>
+</div>
+<div class="preformatted" data-parent="27">20:12:34.088 request:
+3 &gt; DELETE https://petstore.swagger.io/v2/pet/4
+3 &gt; Accept-Encoding: gzip,deflate
+3 &gt; Connection: Keep-Alive
+3 &gt; Host: petstore.swagger.io
+3 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_301)
+3 &gt; accept: application/json
+3 &gt; api_key: special-key
+
+20:12:35.167 response time in milliseconds: 1080.37
+3 &lt; 200
+3 &lt; Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+3 &lt; Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+3 &lt; Access-Control-Allow-Origin: *
+3 &lt; Connection: keep-alive
+3 &lt; Content-Type: application/json
+3 &lt; Date: Mon, 11 Apr 2022 10:12:34 GMT
+3 &lt; Server: Jetty(9.2.9.v20150224)
+3 &lt; Transfer-Encoding: chunked
+{"code":200,"type":"unknown","message":"4"}</div>
+<div class="step-row">
+<div class="step-container" id="28">
+<div class="step-ref passed">28</div>
+<div class="step-cell passed">Then status 200</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="29">
+<div class="step-ref passed">29</div>
+<div class="step-cell passed">* def deletepetResp = response</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="30">
+<div class="step-ref passed">30</div>
+<div class="step-cell passed">* print deletepetResp</div>
 </div>
 <div class="time-cell passed">1</div>
 </div>
-<div class="preformatted" data-parent="27">20:06:19.856 [print] {
+<div class="preformatted" data-parent="30">20:12:35.182 [print] {
   "code": 200,
   "type": "unknown",
   "message": "4"
 }</div>
 <div class="step-row">
-<div class="step-container" id="28">
-<div class="step-ref passed">28</div>
-<div class="step-cell passed">* match petResp.type == 'unknown'</div>
+<div class="step-container" id="31">
+<div class="step-ref passed">31</div>
+<div class="step-cell passed">* match deletepetResp.type == 'unknown'</div>
 </div>
 <div class="time-cell passed">5</div>
 </div>
@@ -436,83 +468,92 @@
 <div class="time-cell comment"></div>
 </div>
 <div class="step-row">
-<div class="step-container" id="29">
-<div class="step-ref passed">29</div>
-<div class="step-cell passed">* def request_header = {accept: 'application/json', api_key: 'special-key'}</div>
+<div class="step-container">
+<div class="step-ref passed"></div>
+<div class="step-cell comment">#    * def request_header = {accept: 'application/json', api_key: 'special-key'}</div>
 </div>
-<div class="time-cell passed">0</div>
+<div class="time-cell comment"></div>
 </div>
 <div class="step-row">
-<div class="step-container" id="30">
-<div class="step-ref passed">30</div>
+<div class="step-container" id="32">
+<div class="step-ref passed">32</div>
 <div class="step-cell passed">Given url baseurl+'/v2/pet/'+petID</div>
 </div>
 <div class="time-cell passed">1</div>
 </div>
 <div class="step-row">
-<div class="step-container" id="31">
-<div class="step-ref passed">31</div>
-<div class="step-cell passed">When method GET</div>
-</div>
-<div class="time-cell passed">922</div>
-</div>
-<div class="preformatted" data-parent="31">20:06:19.872 request:
-4 &gt; GET https://petstore.swagger.io/v2/pet/4
-4 &gt; Accept-Encoding: gzip,deflate
-4 &gt; Connection: Keep-Alive
-4 &gt; Host: petstore.swagger.io
-4 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_301)
-
-20:06:20.794 response time in milliseconds: 918.37
-4 &lt; 404
-4 &lt; Access-Control-Allow-Headers: Content-Type, api_key, Authorization
-4 &lt; Access-Control-Allow-Methods: GET, POST, DELETE, PUT
-4 &lt; Access-Control-Allow-Origin: *
-4 &lt; Connection: keep-alive
-4 &lt; Content-Type: application/json
-4 &lt; Date: Sun, 10 Apr 2022 10:06:20 GMT
-4 &lt; Server: Jetty(9.2.9.v20150224)
-4 &lt; Transfer-Encoding: chunked
-{"code":1,"type":"error","message":"Pet not found"}</div>
-<div class="step-row">
-<div class="step-container" id="32">
-<div class="step-ref passed">32</div>
-<div class="step-cell passed">Then status 404</div>
-</div>
-<div class="time-cell passed">0</div>
-</div>
-<div class="step-row">
 <div class="step-container" id="33">
 <div class="step-ref passed">33</div>
-<div class="step-cell passed">* def petResp = response</div>
+<div class="step-cell passed">And headers Header</div>
 </div>
 <div class="time-cell passed">0</div>
 </div>
 <div class="step-row">
 <div class="step-container" id="34">
 <div class="step-ref passed">34</div>
-<div class="step-cell passed">* print petResp</div>
+<div class="step-cell passed">When method GET</div>
+</div>
+<div class="time-cell passed">1088</div>
+</div>
+<div class="preformatted" data-parent="34">20:12:35.182 request:
+4 &gt; GET https://petstore.swagger.io/v2/pet/4
+4 &gt; Accept-Encoding: gzip,deflate
+4 &gt; Connection: Keep-Alive
+4 &gt; Host: petstore.swagger.io
+4 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_301)
+4 &gt; accept: application/json
+4 &gt; api_key: special-key
+
+20:12:36.277 response time in milliseconds: 1084.33
+4 &lt; 404
+4 &lt; Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+4 &lt; Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+4 &lt; Access-Control-Allow-Origin: *
+4 &lt; Connection: keep-alive
+4 &lt; Content-Type: application/json
+4 &lt; Date: Mon, 11 Apr 2022 10:12:35 GMT
+4 &lt; Server: Jetty(9.2.9.v20150224)
+4 &lt; Transfer-Encoding: chunked
+{"code":1,"type":"error","message":"Pet not found"}</div>
+<div class="step-row">
+<div class="step-container" id="35">
+<div class="step-ref passed">35</div>
+<div class="step-cell passed">Then status 404</div>
 </div>
 <div class="time-cell passed">0</div>
 </div>
-<div class="preformatted" data-parent="34">20:06:20.794 [print] {
+<div class="step-row">
+<div class="step-container" id="36">
+<div class="step-ref passed">36</div>
+<div class="step-cell passed">* def retrievepetResp = response</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="37">
+<div class="step-ref passed">37</div>
+<div class="step-cell passed">* print retrievepetResp</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="preformatted" data-parent="37">20:12:36.277 [print] {
   "code": 1,
   "type": "error",
   "message": "Pet not found"
 }</div>
 <div class="step-row">
-<div class="step-container" id="35">
-<div class="step-ref passed">35</div>
-<div class="step-cell passed">* match petResp.type == 'error'</div>
+<div class="step-container" id="38">
+<div class="step-ref passed">38</div>
+<div class="step-cell passed">* match retrievepetResp.type == 'error'</div>
 </div>
-<div class="time-cell passed">2</div>
+<div class="time-cell passed">3</div>
 </div>
 <div class="step-row">
-<div class="step-container" id="36">
-<div class="step-ref passed">36</div>
-<div class="step-cell passed">* match petResp.message == 'Pet not found'</div>
+<div class="step-container" id="39">
+<div class="step-ref passed">39</div>
+<div class="step-cell passed">* match retrievepetResp.message == 'Pet not found'</div>
 </div>
-<div class="time-cell passed">1</div>
+<div class="time-cell passed">2</div>
 </div>
 </div>
 </div>

@@ -1,40 +1,43 @@
-<testsuite failures="0" name="src/test/java/examples/petStore/findPetByID.feature" skipped="0" tests="1" time="4.250777">
-  <testcase classname="src.test.java.examples.petStore.findPetByID" name="find pet by id, update pet name and then delete petId" time="4.250777">
-    <system-out>* def request_header = {accept: 'application/json', api_key: 'special-key'} . passed
+<testsuite failures="0" name="src/test/java/examples/petStore/findPetByID.feature" skipped="0" tests="1" time="5.463186">
+  <testcase classname="src.test.java.examples.petStore.findPetByID" name="find pet by id, update pet name and then delete petId" time="5.463186">
+    <system-out>* url baseurl ............................................................. passed
+* def Header = {accept: 'application/json', api_key: 'special-key'} ....... passed
+* def updateHeader = {accept: 'application/json', Content-Type: 'application/json'} . passed
 Given url baseurl+'/v2/pet/' .............................................. passed
 And path '4' .............................................................. passed
+And headers Header ........................................................ passed
 When method GET ........................................................... passed
 Then status 200 ........................................................... passed
-* def petResp = response .................................................. passed
-* print petResp ........................................................... passed
-* def petID = petResp.id .................................................. passed
-* print "Id of the pet is " +petID ........................................ passed
+* def getpetResp = response ............................................... passed
+* print getpetResp ........................................................ passed
+* def petID = getpetResp.id ............................................... passed
 * match petID == 4 ........................................................ passed
 * def reqBody = ........................................................... passed
 * reqBody.id = petID ...................................................... passed
 * print reqBody ........................................................... passed
-* def request_header = {accept: 'application/json', Content-Type: 'application/json'} . passed
 Given url baseurl+'/v2/pet' ............................................... passed
+And headers updateHeader .................................................. passed
 And request reqBody ....................................................... passed
 When method PUT ........................................................... passed
 Then status 200 ........................................................... passed
-* def petResp = response .................................................. passed
-* print petResp ........................................................... passed
-* match petResp.name == 'Pitbull' ......................................... passed
+* def putpetResp = response ............................................... passed
+* print putpetResp ........................................................ passed
+* match putpetResp.name == 'Pitbull' ...................................... passed
 * def request_header = {accept: 'application/json'} ....................... passed
 Given url baseurl+'/v2/pet/'+petID ........................................ passed
+And headers Header ........................................................ passed
 When method DELETE ........................................................ passed
 Then status 200 ........................................................... passed
-* def petResp = response .................................................. passed
-* print petResp ........................................................... passed
-* match petResp.type == 'unknown' ......................................... passed
-* def request_header = {accept: 'application/json', api_key: 'special-key'} . passed
+* def deletepetResp = response ............................................ passed
+* print deletepetResp ..................................................... passed
+* match deletepetResp.type == 'unknown' ................................... passed
 Given url baseurl+'/v2/pet/'+petID ........................................ passed
+And headers Header ........................................................ passed
 When method GET ........................................................... passed
 Then status 404 ........................................................... passed
-* def petResp = response .................................................. passed
-* print petResp ........................................................... passed
-* match petResp.type == 'error' ........................................... passed
-* match petResp.message == 'Pet not found' ................................ passed</system-out>
+* def retrievepetResp = response .......................................... passed
+* print retrievepetResp ................................................... passed
+* match retrievepetResp.type == 'error' ................................... passed
+* match retrievepetResp.message == 'Pet not found' ........................ passed</system-out>
   </testcase>
 </testsuite>

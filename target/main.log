@@ -1,39 +1,45 @@
-20:42:18.677 karate.env system property was:  
-20:42:19.099 request:
+20:19:29.450 karate.env system property was:  
+20:19:30.091 request:
 1 > GET https://petstore.swagger.io/v2/pet/4
 1 > Accept-Encoding: gzip,deflate
 1 > Connection: Keep-Alive
 1 > Host: petstore.swagger.io
 1 > User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_301)
+1 > accept: application/json
+1 > api_key: special-key
 
-20:42:20.131 response time in milliseconds: 1038.97
+20:19:31.435 response time in milliseconds: 1351.81
 1 < 200
 1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
 1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
 1 < Access-Control-Allow-Origin: *
 1 < Connection: keep-alive
 1 < Content-Type: application/json
-1 < Date: Sun, 10 Apr 2022 10:42:19 GMT
+1 < Date: Mon, 11 Apr 2022 10:19:30 GMT
 1 < Server: Jetty(9.2.9.v20150224)
 1 < Transfer-Encoding: chunked
-{"id":4,"category":{"id":2,"name":"Skillbox_name"},"name":"Skillbox cat","photoUrls":[],"tags":[],"status":"available"}
+{"id":4,"category":{"id":2,"name":"Dogs"},"name":"German Shepperd","photoUrls":["string"],"tags":[{"id":2,"name":"tag2"}],"status":"available"}
 
-20:42:20.147 [print] {
+20:19:31.450 [print] {
   "photoUrls": [
+    "string"
   ],
-  "name": "Skillbox cat",
+  "name": "German Shepperd",
   "id": 4,
   "category": {
-    "name": "Skillbox_name",
+    "name": "Dogs",
     "id": 2
   },
   "tags": [
+    {
+      "name": "tag2",
+      "id": 2
+    }
   ],
   "status": "available"
 }
 
-20:42:20.147 [print] Id of the pet is 4
-20:42:20.163 [print] {
+20:19:31.497 [print] {
   "category": {
     "id": 2,
     "name": "Dogs"
@@ -52,7 +58,7 @@
   "id": 4
 }
 
-20:42:20.163 request:
+20:19:31.513 request:
 2 > PUT https://petstore.swagger.io/v2/pet
 2 > Accept-Encoding: gzip,deflate
 2 > Connection: Keep-Alive
@@ -60,21 +66,22 @@
 2 > Content-Type: application/json; charset=UTF-8
 2 > Host: petstore.swagger.io
 2 > User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_301)
+2 > accept: application/json
 {"category":{"id":2,"name":"Dogs"},"name":"Pitbull","photoUrls":["string"],"tags":[{"id":3,"name":"tag3"}],"status":"available","id":4}
 
-20:42:21.069 response time in milliseconds: 903.12
+20:19:32.748 response time in milliseconds: 1229.18
 2 < 200
 2 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
 2 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
 2 < Access-Control-Allow-Origin: *
 2 < Connection: keep-alive
 2 < Content-Type: application/json
-2 < Date: Sun, 10 Apr 2022 10:42:20 GMT
+2 < Date: Mon, 11 Apr 2022 10:19:31 GMT
 2 < Server: Jetty(9.2.9.v20150224)
 2 < Transfer-Encoding: chunked
 {"id":4,"category":{"id":2,"name":"Dogs"},"name":"Pitbull","photoUrls":["string"],"tags":[{"id":3,"name":"tag3"}],"status":"available"}
 
-20:42:21.069 [print] {
+20:19:32.748 [print] {
   "photoUrls": [
     "string"
   ],
@@ -93,119 +100,83 @@
   "status": "available"
 }
 
-20:42:21.069 request:
+20:19:32.763 request:
 3 > DELETE https://petstore.swagger.io/v2/pet/4
 3 > Accept-Encoding: gzip,deflate
 3 > Connection: Keep-Alive
 3 > Host: petstore.swagger.io
 3 > User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_301)
+3 > accept: application/json
+3 > api_key: special-key
 
-20:42:21.991 response time in milliseconds: 925.01
+20:19:33.967 response time in milliseconds: 1204.59
 3 < 200
 3 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
 3 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
 3 < Access-Control-Allow-Origin: *
 3 < Connection: keep-alive
 3 < Content-Type: application/json
-3 < Date: Sun, 10 Apr 2022 10:42:21 GMT
+3 < Date: Mon, 11 Apr 2022 10:19:33 GMT
 3 < Server: Jetty(9.2.9.v20150224)
 3 < Transfer-Encoding: chunked
 {"code":200,"type":"unknown","message":"4"}
 
-20:42:21.991 [print] {
+20:19:33.967 [print] {
   "code": 200,
   "type": "unknown",
   "message": "4"
 }
 
-20:42:22.006 request:
+20:19:33.983 request:
 4 > GET https://petstore.swagger.io/v2/pet/4
 4 > Accept-Encoding: gzip,deflate
 4 > Connection: Keep-Alive
 4 > Host: petstore.swagger.io
 4 > User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_301)
+4 > accept: application/json
+4 > api_key: special-key
 
-20:42:22.914 response time in milliseconds: 906.95
+20:19:35.092 response time in milliseconds: 1111.87
 4 < 404
 4 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
 4 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
 4 < Access-Control-Allow-Origin: *
 4 < Connection: keep-alive
 4 < Content-Type: application/json
-4 < Date: Sun, 10 Apr 2022 10:42:22 GMT
+4 < Date: Mon, 11 Apr 2022 10:19:34 GMT
 4 < Server: Jetty(9.2.9.v20150224)
 4 < Transfer-Encoding: chunked
 {"code":1,"type":"error","message":"Pet not found"}
 
-20:42:22.914 [print] {
+20:19:35.092 [print] {
   "code": 1,
   "type": "error",
   "message": "Pet not found"
 }
 
-20:42:22.961 karate.env system property was:  
-20:42:22.961 request:
+20:19:35.280 karate.env system property was:  
+20:19:35.280 request:
 1 > GET https://petstore.swagger.io/v2/pet/2
 1 > Accept-Encoding: gzip,deflate
 1 > Connection: Keep-Alive
 1 > Host: petstore.swagger.io
 1 > User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_301)
+1 > accept: application/json
+1 > api_key: special-key
 
-20:42:23.867 response time in milliseconds: 908.80
+20:19:36.452 response time in milliseconds: 1172.76
 1 < 200
 1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
 1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
 1 < Access-Control-Allow-Origin: *
 1 < Connection: keep-alive
 1 < Content-Type: application/json
-1 < Date: Sun, 10 Apr 2022 10:42:23 GMT
-1 < Server: Jetty(9.2.9.v20150224)
-1 < Transfer-Encoding: chunked
-{"id":2,"category":{"id":2,"name":"Dogs"},"name":"German Shepperd","photoUrls":["string"],"tags":[{"id":2,"name":"tag2"}],"status":"available"}
-
-20:42:23.867 [print] {
-  "photoUrls": [
-    "string"
-  ],
-  "name": "German Shepperd",
-  "id": 2,
-  "category": {
-    "name": "Dogs",
-    "id": 2
-  },
-  "tags": [
-    {
-      "name": "tag2",
-      "id": 2
-    }
-  ],
-  "status": "available"
-}
-
-20:42:23.867 karate.env system property was:  
-20:42:23.867 request:
-1 > PUT https://petstore.swagger.io/v2/pet
-1 > Accept-Encoding: gzip,deflate
-1 > Connection: Keep-Alive
-1 > Content-Length: 135
-1 > Content-Type: application/json; charset=UTF-8
-1 > Host: petstore.swagger.io
-1 > User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_301)
-{"id":2,"category":{"id":2,"name":"Dogs"},"name":"Pitbull","photoUrls":["string"],"tags":[{"id":3,"name":"tag3"}],"status":"available"}
-
-20:42:24.805 response time in milliseconds: 933.46
-1 < 200
-1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
-1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
-1 < Access-Control-Allow-Origin: *
-1 < Connection: keep-alive
-1 < Content-Type: application/json
-1 < Date: Sun, 10 Apr 2022 10:42:24 GMT
+1 < Date: Mon, 11 Apr 2022 10:19:35 GMT
 1 < Server: Jetty(9.2.9.v20150224)
 1 < Transfer-Encoding: chunked
 {"id":2,"category":{"id":2,"name":"Dogs"},"name":"Pitbull","photoUrls":["string"],"tags":[{"id":3,"name":"tag3"}],"status":"available"}
 
-20:42:24.805 [print] {
+20:19:36.452 [print] {
   "photoUrls": [
     "string"
   ],
@@ -224,67 +195,106 @@
   "status": "available"
 }
 
-20:42:24.805 karate.env system property was:  
-20:42:24.820 request:
-1 > DELETE https://petstore.swagger.io/v2/pet/2
+20:19:36.467 karate.env system property was:  
+20:19:36.467 request:
+1 > PUT https://petstore.swagger.io/v2/pet
 1 > Accept-Encoding: gzip,deflate
 1 > Connection: Keep-Alive
+1 > Content-Length: 135
+1 > Content-Type: application/json; charset=UTF-8
 1 > Host: petstore.swagger.io
 1 > User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_301)
+1 > accept: application/json
+{"id":2,"category":{"id":2,"name":"Dogs"},"name":"Pitbull","photoUrls":["string"],"tags":[{"id":3,"name":"tag3"}],"status":"available"}
 
-20:42:25.727 response time in milliseconds: 912.13
+20:19:37.655 response time in milliseconds: 1181.20
 1 < 200
 1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
 1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
 1 < Access-Control-Allow-Origin: *
 1 < Connection: keep-alive
 1 < Content-Type: application/json
-1 < Date: Sun, 10 Apr 2022 10:42:25 GMT
+1 < Date: Mon, 11 Apr 2022 10:19:36 GMT
+1 < Server: Jetty(9.2.9.v20150224)
+1 < Transfer-Encoding: chunked
+{"id":2,"category":{"id":2,"name":"Dogs"},"name":"Pitbull","photoUrls":["string"],"tags":[{"id":3,"name":"tag3"}],"status":"available"}
+
+20:19:37.655 [print] {
+  "photoUrls": [
+    "string"
+  ],
+  "name": "Pitbull",
+  "id": 2,
+  "category": {
+    "name": "Dogs",
+    "id": 2
+  },
+  "tags": [
+    {
+      "name": "tag3",
+      "id": 3
+    }
+  ],
+  "status": "available"
+}
+
+20:19:37.671 karate.env system property was:  
+20:19:37.686 request:
+1 > DELETE https://petstore.swagger.io/v2/pet/2
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Host: petstore.swagger.io
+1 > User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_301)
+1 > accept: application/json
+1 > api_key: special-key
+
+20:19:38.890 response time in milliseconds: 1200.02
+1 < 200
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Origin: *
+1 < Connection: keep-alive
+1 < Content-Type: application/json
+1 < Date: Mon, 11 Apr 2022 10:19:38 GMT
 1 < Server: Jetty(9.2.9.v20150224)
 1 < Transfer-Encoding: chunked
 {"code":200,"type":"unknown","message":"2"}
 
-20:42:25.727 [print] {
+20:19:38.890 [print] {
   "code": 200,
   "type": "unknown",
   "message": "2"
 }
 
-20:42:25.727 karate.env system property was:  
-20:42:25.727 request:
+20:19:38.890 karate.env system property was:  
+20:19:38.890 request:
 1 > GET https://petstore.swagger.io/v2/pet/2
 1 > Accept-Encoding: gzip,deflate
 1 > Connection: Keep-Alive
 1 > Host: petstore.swagger.io
 1 > User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_301)
+1 > accept: application/json
+1 > api_key: special-key
 
-20:42:26.645 response time in milliseconds: 909.79
+20:19:40.016 response time in milliseconds: 1117.44
 1 < 404
 1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
 1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
 1 < Access-Control-Allow-Origin: *
 1 < Connection: keep-alive
 1 < Content-Type: application/json
-1 < Date: Sun, 10 Apr 2022 10:42:26 GMT
+1 < Date: Mon, 11 Apr 2022 10:19:39 GMT
 1 < Server: Jetty(9.2.9.v20150224)
 1 < Transfer-Encoding: chunked
 {"code":1,"type":"error","message":"Pet not found"}
 
-20:42:26.645 [print] {
+20:19:40.016 [print] {
   "code": 1,
   "type": "error",
   "message": "Pet not found"
 }
 
-.250 [print] {
-  "code": 1,
-  "type": "error",
-  "message": "Pet not found"
-}
-
-ss_fraction":0,"report_to":"cf-nel","max_age":604800}
-2 < Pragma: no-cache
-2 < Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=cirQlZiTrNrFFCxSx3M8K5dMgetdewVYBMG4Sw15AI6W%2FqVODmBMqoz24T0zG5zgvcI47NRJ28uVDI%2F0nOIJuAVAdcXVcsFxRxeFdh6yFYHw5XqI2Ug6B13jt%2FfotTWBdAP23wjNL98Ys8V1qiFy"}],"group":"cf-nel","max_age":604800}
+max_age":604800}
 2 < Server: cloudflare
 2 < Transfer-Encoding: chunked
 2 < Vary: Origin, Accept-Encoding

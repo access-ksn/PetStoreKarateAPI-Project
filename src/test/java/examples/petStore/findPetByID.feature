@@ -1,18 +1,21 @@
-Feature: pet store API automation
+Feature: End to end workflow for pet store swagger API's with petID as Ddyanmic path parm
 
+  Background:
+    * url baseurl
+    * def Header = {accept: 'application/json', api_key: 'special-key'}
+    * def updateHeader = {accept: 'application/json', Content-Type: 'application/json'}
 
   Scenario: find pet by id, update pet name and then delete petId
     #1: Find pet by id:
-    * def request_header = {accept: 'application/json', api_key: 'special-key'}
     Given url baseurl+'/v2/pet/'
     And path '4'
+    And headers Header
     When method GET
     Then status 200
-    * def petResp = response
-    * print petResp
+    * def getpetResp = response
+    * print getpetResp
     # Fetch the petID from the getResponse
-    * def petID = petResp.id
-    * print "Id of the pet is " +petID
+    * def petID = getpetResp.id
     * match petID == 4
 
     #2 Amend pet name of an existing petID:
@@ -40,32 +43,33 @@ Feature: pet store API automation
     * reqBody.id = petID
     * print reqBody
 
-    * def request_header = {accept: 'application/json', Content-Type: 'application/json'}
     Given url baseurl+'/v2/pet'
+    And headers updateHeader
     And request reqBody
     When method PUT
     Then status 200
-    * def petResp = response
-    * print petResp
-    * match petResp.name == 'Pitbull'
+    * def putpetResp = response
+    * print putpetResp
+    * match putpetResp.name == 'Pitbull'
 
     #3 Delete an existing pet:
     * def request_header = {accept: 'application/json'}
     Given url baseurl+'/v2/pet/'+petID
+    And headers Header
     When method DELETE
     Then status 200
-    * def petResp = response
-    * print petResp
-    * match petResp.type == 'unknown'
+    * def deletepetResp = response
+    * print deletepetResp
+    * match deletepetResp.type == 'unknown'
 
     #4 Find pet by id:
-    * def request_header = {accept: 'application/json', api_key: 'special-key'}
     Given url baseurl+'/v2/pet/'+petID
+    And headers Header
     When method GET
     Then status 404
-    * def petResp = response
-    * print petResp
-    * match petResp.type == 'error'
-    * match petResp.message == 'Pet not found'
+    * def retrievepetResp = response
+    * print retrievepetResp
+    * match retrievepetResp.type == 'error'
+    * match retrievepetResp.message == 'Pet not found'
 
 

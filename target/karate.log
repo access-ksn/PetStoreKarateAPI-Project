@@ -24788,3 +24788,1152 @@ stack trace: com.intuit.karate.ScriptBindings.eval(ScriptBindings.java:155)
   "message": "Pet not found"
 }
 
+19:48:09.069 [main] INFO  com.intuit.karate.Runner - waiting for parallel features to complete ...
+19:48:09.226 [ForkJoinPool-1-worker-1] INFO  com.intuit.karate - karate.env system property was:  
+19:48:09.336 [ForkJoinPool-1-worker-1] INFO  com.intuit.karate - karate.env system property was:  
+19:48:09.352 [ForkJoinPool-1-worker-1] INFO  com.intuit.karate - karate.env system property was:  
+19:48:09.352 [ForkJoinPool-1-worker-1] INFO  com.intuit.karate - karate.env system property was:  
+19:48:09.430 [pool-1-thread-1] INFO  com.intuit.karate.Runner - <<fail>> feature 1 of 1: src/test/java/examples/petStore/petStoreAPI.feature
+19:50:56.880 [main] INFO  com.intuit.karate.Runner - waiting for parallel features to complete ...
+19:50:57.050 [ForkJoinPool-1-worker-1] INFO  com.intuit.karate - karate.env system property was:  
+19:50:57.729 [ForkJoinPool-1-worker-1] DEBUG com.intuit.karate - request:
+1 > GET https://petstore.swagger.io/v2/pet/2
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Host: petstore.swagger.io
+1 > User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_301)
+1 > accept: application/json
+1 > api_key: special-key
+
+19:50:59.059 [ForkJoinPool-1-worker-1] DEBUG com.intuit.karate - response time in milliseconds: 1328.53
+1 < 200
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Origin: *
+1 < Connection: keep-alive
+1 < Content-Type: application/json
+1 < Date: Mon, 11 Apr 2022 09:50:58 GMT
+1 < Server: Jetty(9.2.9.v20150224)
+1 < Transfer-Encoding: chunked
+{"id":2,"category":{"id":2,"name":"Dogs"},"name":"German Shepperd","photoUrls":["string"],"tags":[{"id":2,"name":"tag2"}],"status":"available"}
+
+19:50:59.061 [ForkJoinPool-1-worker-1] INFO  com.intuit.karate - [print] {
+  "photoUrls": [
+    "string"
+  ],
+  "name": "German Shepperd",
+  "id": 2,
+  "category": {
+    "name": "Dogs",
+    "id": 2
+  },
+  "tags": [
+    {
+      "name": "tag2",
+      "id": 2
+    }
+  ],
+  "status": "available"
+}
+
+19:50:59.082 [ForkJoinPool-1-worker-1] INFO  com.intuit.karate - karate.env system property was:  
+19:50:59.090 [ForkJoinPool-1-worker-1] DEBUG com.intuit.karate - request:
+1 > PUT https://petstore.swagger.io/v2/pet
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 135
+1 > Content-Type: application/json; charset=UTF-8
+1 > Host: petstore.swagger.io
+1 > User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_301)
+1 > accept: application/json
+{"id":2,"category":{"id":2,"name":"Dogs"},"name":"Pitbull","photoUrls":["string"],"tags":[{"id":3,"name":"tag3"}],"status":"available"}
+
+19:51:00.275 [ForkJoinPool-1-worker-1] DEBUG com.intuit.karate - response time in milliseconds: 1183.72
+1 < 200
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Origin: *
+1 < Connection: keep-alive
+1 < Content-Type: application/json
+1 < Date: Mon, 11 Apr 2022 09:50:59 GMT
+1 < Server: Jetty(9.2.9.v20150224)
+1 < Transfer-Encoding: chunked
+{"id":2,"category":{"id":2,"name":"Dogs"},"name":"Pitbull","photoUrls":["string"],"tags":[{"id":3,"name":"tag3"}],"status":"available"}
+
+19:51:00.277 [ForkJoinPool-1-worker-1] INFO  com.intuit.karate - [print] {
+  "photoUrls": [
+    "string"
+  ],
+  "name": "Pitbull",
+  "id": 2,
+  "category": {
+    "name": "Dogs",
+    "id": 2
+  },
+  "tags": [
+    {
+      "name": "tag3",
+      "id": 3
+    }
+  ],
+  "status": "available"
+}
+
+19:51:00.299 [ForkJoinPool-1-worker-1] INFO  com.intuit.karate - karate.env system property was:  
+19:51:00.308 [ForkJoinPool-1-worker-1] DEBUG com.intuit.karate - request:
+1 > DELETE https://petstore.swagger.io/v2/pet/2
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Host: petstore.swagger.io
+1 > User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_301)
+1 > accept: application/json
+1 > api_key: special-key
+
+19:51:01.502 [ForkJoinPool-1-worker-1] DEBUG com.intuit.karate - response time in milliseconds: 1192.49
+1 < 200
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Origin: *
+1 < Connection: keep-alive
+1 < Content-Type: application/json
+1 < Date: Mon, 11 Apr 2022 09:51:00 GMT
+1 < Server: Jetty(9.2.9.v20150224)
+1 < Transfer-Encoding: chunked
+{"code":200,"type":"unknown","message":"2"}
+
+19:51:01.502 [ForkJoinPool-1-worker-1] INFO  com.intuit.karate - [print] {
+  "code": 200,
+  "type": "unknown",
+  "message": "2"
+}
+
+19:51:01.513 [ForkJoinPool-1-worker-1] INFO  com.intuit.karate - karate.env system property was:  
+19:51:01.517 [ForkJoinPool-1-worker-1] DEBUG com.intuit.karate - request:
+1 > GET https://petstore.swagger.io/v2/pet/2
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Host: petstore.swagger.io
+1 > User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_301)
+
+19:51:02.731 [ForkJoinPool-1-worker-1] DEBUG com.intuit.karate - response time in milliseconds: 1213.07
+1 < 404
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Origin: *
+1 < Connection: keep-alive
+1 < Content-Type: application/json
+1 < Date: Mon, 11 Apr 2022 09:51:01 GMT
+1 < Server: Jetty(9.2.9.v20150224)
+1 < Transfer-Encoding: chunked
+{"code":1,"type":"error","message":"Pet not found"}
+
+19:51:02.733 [ForkJoinPool-1-worker-1] INFO  com.intuit.karate - [print] {
+  "code": 1,
+  "type": "error",
+  "message": "Pet not found"
+}
+
+19:51:02.920 [pool-1-thread-1] INFO  com.intuit.karate.Runner - <<pass>> feature 1 of 1: src/test/java/examples/petStore/petStoreAPI.feature
+19:57:16.474 [main] INFO  com.intuit.karate.Runner - waiting for parallel features to complete ...
+19:57:16.634 [ForkJoinPool-1-worker-1] INFO  com.intuit.karate - karate.env system property was:  
+19:57:17.322 [ForkJoinPool-1-worker-1] DEBUG com.intuit.karate - request:
+1 > GET https://petstore.swagger.io/v2/pet/2
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Host: petstore.swagger.io
+1 > User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_301)
+1 > accept: application/json
+1 > api_key: special-key
+
+19:57:18.782 [ForkJoinPool-1-worker-1] DEBUG com.intuit.karate - response time in milliseconds: 1455.21
+1 < 200
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Origin: *
+1 < Connection: keep-alive
+1 < Content-Type: application/json
+1 < Date: Mon, 11 Apr 2022 09:57:18 GMT
+1 < Server: Jetty(9.2.9.v20150224)
+1 < Transfer-Encoding: chunked
+{"id":2,"category":{"id":2,"name":"Dogs"},"name":"German Shepperd","photoUrls":["string"],"tags":[{"id":2,"name":"tag2"}],"status":"available"}
+
+19:57:18.787 [ForkJoinPool-1-worker-1] INFO  com.intuit.karate - [print] {
+  "photoUrls": [
+    "string"
+  ],
+  "name": "German Shepperd",
+  "id": 2,
+  "category": {
+    "name": "Dogs",
+    "id": 2
+  },
+  "tags": [
+    {
+      "name": "tag2",
+      "id": 2
+    }
+  ],
+  "status": "available"
+}
+
+19:57:18.815 [ForkJoinPool-1-worker-1] INFO  com.intuit.karate - karate.env system property was:  
+19:57:18.823 [ForkJoinPool-1-worker-1] DEBUG com.intuit.karate - request:
+1 > PUT https://petstore.swagger.io/v2/pet
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 135
+1 > Content-Type: application/json; charset=UTF-8
+1 > Host: petstore.swagger.io
+1 > User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_301)
+1 > accept: application/json
+{"id":2,"category":{"id":2,"name":"Dogs"},"name":"Pitbull","photoUrls":["string"],"tags":[{"id":3,"name":"tag3"}],"status":"available"}
+
+19:57:19.905 [ForkJoinPool-1-worker-1] DEBUG com.intuit.karate - response time in milliseconds: 1082.13
+1 < 200
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Origin: *
+1 < Connection: keep-alive
+1 < Content-Type: application/json
+1 < Date: Mon, 11 Apr 2022 09:57:19 GMT
+1 < Server: Jetty(9.2.9.v20150224)
+1 < Transfer-Encoding: chunked
+{"id":2,"category":{"id":2,"name":"Dogs"},"name":"Pitbull","photoUrls":["string"],"tags":[{"id":3,"name":"tag3"}],"status":"available"}
+
+19:57:19.906 [ForkJoinPool-1-worker-1] INFO  com.intuit.karate - [print] {
+  "photoUrls": [
+    "string"
+  ],
+  "name": "Pitbull",
+  "id": 2,
+  "category": {
+    "name": "Dogs",
+    "id": 2
+  },
+  "tags": [
+    {
+      "name": "tag3",
+      "id": 3
+    }
+  ],
+  "status": "available"
+}
+
+19:57:19.914 [ForkJoinPool-1-worker-1] INFO  com.intuit.karate - karate.env system property was:  
+19:57:19.917 [ForkJoinPool-1-worker-1] DEBUG com.intuit.karate - request:
+1 > DELETE https://petstore.swagger.io/v2/pet/2
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Host: petstore.swagger.io
+1 > User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_301)
+1 > accept: application/json
+1 > api_key: special-key
+
+19:57:21.108 [ForkJoinPool-1-worker-1] DEBUG com.intuit.karate - response time in milliseconds: 1189.31
+1 < 200
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Origin: *
+1 < Connection: keep-alive
+1 < Content-Type: application/json
+1 < Date: Mon, 11 Apr 2022 09:57:20 GMT
+1 < Server: Jetty(9.2.9.v20150224)
+1 < Transfer-Encoding: chunked
+{"code":200,"type":"unknown","message":"2"}
+
+19:57:21.110 [ForkJoinPool-1-worker-1] INFO  com.intuit.karate - [print] {
+  "code": 200,
+  "type": "unknown",
+  "message": "2"
+}
+
+19:57:21.132 [ForkJoinPool-1-worker-1] INFO  com.intuit.karate - karate.env system property was:  
+19:57:21.141 [ForkJoinPool-1-worker-1] DEBUG com.intuit.karate - request:
+1 > GET https://petstore.swagger.io/v2/pet/2
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Host: petstore.swagger.io
+1 > User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_301)
+1 > accept: application/json
+1 > api_key: special-key
+
+19:57:22.338 [ForkJoinPool-1-worker-1] DEBUG com.intuit.karate - response time in milliseconds: 1194.90
+1 < 404
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Origin: *
+1 < Connection: keep-alive
+1 < Content-Type: application/json
+1 < Date: Mon, 11 Apr 2022 09:57:21 GMT
+1 < Server: Jetty(9.2.9.v20150224)
+1 < Transfer-Encoding: chunked
+{"code":1,"type":"error","message":"Pet not found"}
+
+19:57:22.340 [ForkJoinPool-1-worker-1] INFO  com.intuit.karate - [print] {
+  "code": 1,
+  "type": "error",
+  "message": "Pet not found"
+}
+
+19:57:22.409 [pool-1-thread-1] INFO  com.intuit.karate.Runner - <<pass>> feature 1 of 1: src/test/java/examples/petStore/petStoreAPI.feature
+20:05:19.693 [main] INFO  com.intuit.karate.Runner - waiting for parallel features to complete ...
+20:05:19.849 [ForkJoinPool-1-worker-1] INFO  com.intuit.karate - karate.env system property was:  
+20:05:20.553 [ForkJoinPool-1-worker-1] DEBUG com.intuit.karate - request:
+1 > GET https://petstore.swagger.io/v2/pet/4
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Host: petstore.swagger.io
+1 > User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_301)
+
+20:05:21.992 [ForkJoinPool-1-worker-1] DEBUG com.intuit.karate - response time in milliseconds: 1432.34
+1 < 200
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Origin: *
+1 < Connection: keep-alive
+1 < Content-Type: application/json
+1 < Date: Mon, 11 Apr 2022 10:05:21 GMT
+1 < Server: Jetty(9.2.9.v20150224)
+1 < Transfer-Encoding: chunked
+{"id":4,"category":{"id":2,"name":"Dogs"},"name":"German Shepperd","photoUrls":["string"],"tags":[{"id":2,"name":"tag2"}],"status":"available"}
+
+20:05:21.992 [ForkJoinPool-1-worker-1] INFO  com.intuit.karate - [print] {
+  "photoUrls": [
+    "string"
+  ],
+  "name": "German Shepperd",
+  "id": 4,
+  "category": {
+    "name": "Dogs",
+    "id": 2
+  },
+  "tags": [
+    {
+      "name": "tag2",
+      "id": 2
+    }
+  ],
+  "status": "available"
+}
+
+20:05:22.008 [ForkJoinPool-1-worker-1] INFO  com.intuit.karate - [print] {
+  "category": {
+    "id": 2,
+    "name": "Dogs"
+  },
+  "name": "Pitbull",
+  "photoUrls": [
+    "string"
+  ],
+  "tags": [
+    {
+      "id": 3,
+      "name": "tag3"
+    }
+  ],
+  "status": "available",
+  "id": 4
+}
+
+20:05:22.023 [ForkJoinPool-1-worker-1] DEBUG com.intuit.karate - request:
+2 > PUT https://petstore.swagger.io/v2/pet
+2 > Accept-Encoding: gzip,deflate
+2 > Connection: Keep-Alive
+2 > Content-Length: 135
+2 > Content-Type: application/json; charset=UTF-8
+2 > Host: petstore.swagger.io
+2 > User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_301)
+2 > accept: application/json
+{"category":{"id":2,"name":"Dogs"},"name":"Pitbull","photoUrls":["string"],"tags":[{"id":3,"name":"tag3"}],"status":"available","id":4}
+
+20:05:23.211 [ForkJoinPool-1-worker-1] DEBUG com.intuit.karate - response time in milliseconds: 1191.65
+2 < 200
+2 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+2 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+2 < Access-Control-Allow-Origin: *
+2 < Connection: keep-alive
+2 < Content-Type: application/json
+2 < Date: Mon, 11 Apr 2022 10:05:22 GMT
+2 < Server: Jetty(9.2.9.v20150224)
+2 < Transfer-Encoding: chunked
+{"id":4,"category":{"id":2,"name":"Dogs"},"name":"Pitbull","photoUrls":["string"],"tags":[{"id":3,"name":"tag3"}],"status":"available"}
+
+20:05:23.211 [ForkJoinPool-1-worker-1] INFO  com.intuit.karate - [print] {
+  "photoUrls": [
+    "string"
+  ],
+  "name": "Pitbull",
+  "id": 4,
+  "category": {
+    "name": "Dogs",
+    "id": 2
+  },
+  "tags": [
+    {
+      "name": "tag3",
+      "id": 3
+    }
+  ],
+  "status": "available"
+}
+
+20:05:23.227 [ForkJoinPool-1-worker-1] DEBUG com.intuit.karate - request:
+3 > DELETE https://petstore.swagger.io/v2/pet/4
+3 > Accept-Encoding: gzip,deflate
+3 > Connection: Keep-Alive
+3 > Host: petstore.swagger.io
+3 > User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_301)
+3 > accept: application/json
+3 > api_key: special-key
+
+20:05:24.446 [ForkJoinPool-1-worker-1] DEBUG com.intuit.karate - response time in milliseconds: 1206.56
+3 < 200
+3 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+3 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+3 < Access-Control-Allow-Origin: *
+3 < Connection: keep-alive
+3 < Content-Type: application/json
+3 < Date: Mon, 11 Apr 2022 10:05:23 GMT
+3 < Server: Jetty(9.2.9.v20150224)
+3 < Transfer-Encoding: chunked
+{"code":200,"type":"unknown","message":"4"}
+
+20:05:24.446 [ForkJoinPool-1-worker-1] INFO  com.intuit.karate - [print] {
+  "code": 200,
+  "type": "unknown",
+  "message": "4"
+}
+
+20:05:24.446 [ForkJoinPool-1-worker-1] DEBUG com.intuit.karate - request:
+4 > GET https://petstore.swagger.io/v2/pet/4
+4 > Accept-Encoding: gzip,deflate
+4 > Connection: Keep-Alive
+4 > Host: petstore.swagger.io
+4 > User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_301)
+4 > accept: application/json
+4 > api_key: special-key
+
+20:05:25.665 [ForkJoinPool-1-worker-1] DEBUG com.intuit.karate - response time in milliseconds: 1215.64
+4 < 404
+4 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+4 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+4 < Access-Control-Allow-Origin: *
+4 < Connection: keep-alive
+4 < Content-Type: application/json
+4 < Date: Mon, 11 Apr 2022 10:05:24 GMT
+4 < Server: Jetty(9.2.9.v20150224)
+4 < Transfer-Encoding: chunked
+{"code":1,"type":"error","message":"Pet not found"}
+
+20:05:25.680 [ForkJoinPool-1-worker-1] INFO  com.intuit.karate - [print]
+20:05:25.805 [pool-1-thread-1] INFO  com.intuit.karate.Runner - <<fail>> feature 1 of 1: src/test/java/examples/petStore/findPetByID.feature
+20:11:16.958 [main] INFO  com.intuit.karate.Runner - waiting for parallel features to complete ...
+20:11:17.099 [ForkJoinPool-1-worker-1] INFO  com.intuit.karate - karate.env system property was:  
+20:11:17.280 [pool-1-thread-1] INFO  com.intuit.karate.Runner - <<fail>> feature 1 of 1: src/test/java/examples/petStore/findPetByID.feature
+20:12:01.637 [main] INFO  com.intuit.karate.Runner - waiting for parallel features to complete ...
+20:12:01.778 [ForkJoinPool-1-worker-1] INFO  com.intuit.karate - karate.env system property was:  
+20:12:01.950 [pool-1-thread-1] INFO  com.intuit.karate.Runner - <<fail>> feature 1 of 1: src/test/java/examples/petStore/findPetByID.feature
+20:12:30.586 [main] INFO  com.intuit.karate.Runner - waiting for parallel features to complete ...
+20:12:30.742 [ForkJoinPool-1-worker-1] INFO  com.intuit.karate - karate.env system property was:  
+20:12:31.430 [ForkJoinPool-1-worker-1] DEBUG com.intuit.karate - request:
+1 > GET https://petstore.swagger.io/v2/pet/4
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Host: petstore.swagger.io
+1 > User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_301)
+1 > accept: application/json
+1 > api_key: special-key
+
+20:12:32.822 [ForkJoinPool-1-worker-1] DEBUG com.intuit.karate - response time in milliseconds: 1379.85
+1 < 200
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Origin: *
+1 < Connection: keep-alive
+1 < Content-Type: application/json
+1 < Date: Mon, 11 Apr 2022 10:12:32 GMT
+1 < Server: Jetty(9.2.9.v20150224)
+1 < Transfer-Encoding: chunked
+{"id":4,"category":{"id":2,"name":"Dogs"},"name":"German Shepperd","photoUrls":["string"],"tags":[{"id":2,"name":"tag2"}],"status":"available"}
+
+20:12:32.822 [ForkJoinPool-1-worker-1] INFO  com.intuit.karate - [print] {
+  "photoUrls": [
+    "string"
+  ],
+  "name": "German Shepperd",
+  "id": 4,
+  "category": {
+    "name": "Dogs",
+    "id": 2
+  },
+  "tags": [
+    {
+      "name": "tag2",
+      "id": 2
+    }
+  ],
+  "status": "available"
+}
+
+20:12:32.869 [ForkJoinPool-1-worker-1] INFO  com.intuit.karate - [print] {
+  "category": {
+    "id": 2,
+    "name": "Dogs"
+  },
+  "name": "Pitbull",
+  "photoUrls": [
+    "string"
+  ],
+  "tags": [
+    {
+      "id": 3,
+      "name": "tag3"
+    }
+  ],
+  "status": "available",
+  "id": 4
+}
+
+20:12:32.884 [ForkJoinPool-1-worker-1] DEBUG com.intuit.karate - request:
+2 > PUT https://petstore.swagger.io/v2/pet
+2 > Accept-Encoding: gzip,deflate
+2 > Connection: Keep-Alive
+2 > Content-Length: 135
+2 > Content-Type: application/json; charset=UTF-8
+2 > Host: petstore.swagger.io
+2 > User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_301)
+2 > accept: application/json
+{"category":{"id":2,"name":"Dogs"},"name":"Pitbull","photoUrls":["string"],"tags":[{"id":3,"name":"tag3"}],"status":"available","id":4}
+
+20:12:34.077 [ForkJoinPool-1-worker-1] DEBUG com.intuit.karate - response time in milliseconds: 1181.67
+2 < 200
+2 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+2 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+2 < Access-Control-Allow-Origin: *
+2 < Connection: keep-alive
+2 < Content-Type: application/json
+2 < Date: Mon, 11 Apr 2022 10:12:33 GMT
+2 < Server: Jetty(9.2.9.v20150224)
+2 < Transfer-Encoding: chunked
+{"id":4,"category":{"id":2,"name":"Dogs"},"name":"Pitbull","photoUrls":["string"],"tags":[{"id":3,"name":"tag3"}],"status":"available"}
+
+20:12:34.080 [ForkJoinPool-1-worker-1] INFO  com.intuit.karate - [print] {
+  "photoUrls": [
+    "string"
+  ],
+  "name": "Pitbull",
+  "id": 4,
+  "category": {
+    "name": "Dogs",
+    "id": 2
+  },
+  "tags": [
+    {
+      "name": "tag3",
+      "id": 3
+    }
+  ],
+  "status": "available"
+}
+
+20:12:34.088 [ForkJoinPool-1-worker-1] DEBUG com.intuit.karate - request:
+3 > DELETE https://petstore.swagger.io/v2/pet/4
+3 > Accept-Encoding: gzip,deflate
+3 > Connection: Keep-Alive
+3 > Host: petstore.swagger.io
+3 > User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_301)
+3 > accept: application/json
+3 > api_key: special-key
+
+20:12:35.167 [ForkJoinPool-1-worker-1] DEBUG com.intuit.karate - response time in milliseconds: 1080.37
+3 < 200
+3 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+3 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+3 < Access-Control-Allow-Origin: *
+3 < Connection: keep-alive
+3 < Content-Type: application/json
+3 < Date: Mon, 11 Apr 2022 10:12:34 GMT
+3 < Server: Jetty(9.2.9.v20150224)
+3 < Transfer-Encoding: chunked
+{"code":200,"type":"unknown","message":"4"}
+
+20:12:35.167 [ForkJoinPool-1-worker-1] INFO  com.intuit.karate - [print] {
+  "code": 200,
+  "type": "unknown",
+  "message": "4"
+}
+
+20:12:35.182 [ForkJoinPool-1-worker-1] DEBUG com.intuit.karate - request:
+4 > GET https://petstore.swagger.io/v2/pet/4
+4 > Accept-Encoding: gzip,deflate
+4 > Connection: Keep-Alive
+4 > Host: petstore.swagger.io
+4 > User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_301)
+4 > accept: application/json
+4 > api_key: special-key
+
+20:12:36.277 [ForkJoinPool-1-worker-1] DEBUG com.intuit.karate - response time in milliseconds: 1084.33
+4 < 404
+4 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+4 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+4 < Access-Control-Allow-Origin: *
+4 < Connection: keep-alive
+4 < Content-Type: application/json
+4 < Date: Mon, 11 Apr 2022 10:12:35 GMT
+4 < Server: Jetty(9.2.9.v20150224)
+4 < Transfer-Encoding: chunked
+{"code":1,"type":"error","message":"Pet not found"}
+
+20:12:36.277 [ForkJoinPool-1-worker-1] INFO  com.intuit.karate - [print] {
+  "code": 1,
+  "type": "error",
+  "message": "Pet not found"
+}
+
+20:12:36.339 [pool-1-thread-1] INFO  com.intuit.karate.Runner - <<pass>> feature 1 of 1: src/test/java/examples/petStore/findPetByID.feature
+20:15:53.661 [main] INFO  com.intuit.karate - karate.env system property was:  
+20:15:54.317 [main] DEBUG com.intuit.karate - request:
+1 > GET https://petstore.swagger.io/v2/pet/4
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Host: petstore.swagger.io
+1 > User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_301)
+1 > accept: application/json
+1 > api_key: special-key
+
+20:15:55.662 [main] DEBUG com.intuit.karate - response time in milliseconds: 1335.01
+1 < 200
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Origin: *
+1 < Connection: keep-alive
+1 < Content-Type: application/json
+1 < Date: Mon, 11 Apr 2022 10:15:54 GMT
+1 < Server: Jetty(9.2.9.v20150224)
+1 < Transfer-Encoding: chunked
+{"id":4,"category":{"id":2,"name":"Dogs"},"name":"German Shepperd","photoUrls":["string"],"tags":[{"id":2,"name":"tag2"}],"status":"available"}
+
+20:15:55.662 [main] INFO  com.intuit.karate - [print] {
+  "photoUrls": [
+    "string"
+  ],
+  "name": "German Shepperd",
+  "id": 4,
+  "category": {
+    "name": "Dogs",
+    "id": 2
+  },
+  "tags": [
+    {
+      "name": "tag2",
+      "id": 2
+    }
+  ],
+  "status": "available"
+}
+
+20:15:55.677 [main] INFO  com.intuit.karate - [print] {
+  "category": {
+    "id": 2,
+    "name": "Dogs"
+  },
+  "name": "Pitbull",
+  "photoUrls": [
+    "string"
+  ],
+  "tags": [
+    {
+      "id": 3,
+      "name": "tag3"
+    }
+  ],
+  "status": "available",
+  "id": 4
+}
+
+20:15:55.693 [main] DEBUG com.intuit.karate - request:
+2 > PUT https://petstore.swagger.io/v2/pet
+2 > Accept-Encoding: gzip,deflate
+2 > Connection: Keep-Alive
+2 > Content-Length: 135
+2 > Content-Type: application/json; charset=UTF-8
+2 > Host: petstore.swagger.io
+2 > User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_301)
+2 > accept: application/json
+{"category":{"id":2,"name":"Dogs"},"name":"Pitbull","photoUrls":["string"],"tags":[{"id":3,"name":"tag3"}],"status":"available","id":4}
+
+20:15:56.771 [main] DEBUG com.intuit.karate - response time in milliseconds: 1082.21
+2 < 200
+2 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+2 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+2 < Access-Control-Allow-Origin: *
+2 < Connection: keep-alive
+2 < Content-Type: application/json
+2 < Date: Mon, 11 Apr 2022 10:15:55 GMT
+2 < Server: Jetty(9.2.9.v20150224)
+2 < Transfer-Encoding: chunked
+{"id":4,"category":{"id":2,"name":"Dogs"},"name":"Pitbull","photoUrls":["string"],"tags":[{"id":3,"name":"tag3"}],"status":"available"}
+
+20:15:56.771 [main] INFO  com.intuit.karate - [print] {
+  "photoUrls": [
+    "string"
+  ],
+  "name": "Pitbull",
+  "id": 4,
+  "category": {
+    "name": "Dogs",
+    "id": 2
+  },
+  "tags": [
+    {
+      "name": "tag3",
+      "id": 3
+    }
+  ],
+  "status": "available"
+}
+
+20:15:56.802 [main] DEBUG com.intuit.karate - request:
+3 > DELETE https://petstore.swagger.io/v2/pet/4
+3 > Accept-Encoding: gzip,deflate
+3 > Connection: Keep-Alive
+3 > Host: petstore.swagger.io
+3 > User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_301)
+3 > accept: application/json
+3 > api_key: special-key
+
+20:15:58.006 [main] DEBUG com.intuit.karate - response time in milliseconds: 1204.40
+3 < 200
+3 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+3 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+3 < Access-Control-Allow-Origin: *
+3 < Connection: keep-alive
+3 < Content-Type: application/json
+3 < Date: Mon, 11 Apr 2022 10:15:57 GMT
+3 < Server: Jetty(9.2.9.v20150224)
+3 < Transfer-Encoding: chunked
+{"code":200,"type":"unknown","message":"4"}
+
+20:15:58.006 [main] INFO  com.intuit.karate - [print] {
+  "code": 200,
+  "type": "unknown",
+  "message": "4"
+}
+
+20:15:58.021 [main] DEBUG com.intuit.karate - request:
+4 > GET https://petstore.swagger.io/v2/pet/4
+4 > Accept-Encoding: gzip,deflate
+4 > Connection: Keep-Alive
+4 > Host: petstore.swagger.io
+4 > User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_301)
+4 > accept: application/json
+4 > api_key: special-key
+
+20:15:59.226 [main] DEBUG com.intuit.karate - response time in milliseconds: 1216.81
+4 < 404
+4 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+4 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+4 < Access-Control-Allow-Origin: *
+4 < Connection: keep-alive
+4 < Content-Type: application/json
+4 < Date: Mon, 11 Apr 2022 10:15:58 GMT
+4 < Server: Jetty(9.2.9.v20150224)
+4 < Transfer-Encoding: chunked
+{"code":1,"type":"error","message":"Pet not found"}
+
+20:15:59.241 [main] INFO  com.intuit.karate - [print] {
+  "code": 1,
+  "type": "error",
+  "message": "Pet not found"
+}
+
+20:15:59.319 [main] INFO  com.intuit.karate - karate.env system property was:  
+20:15:59.351 [main] INFO  com.intuit.karate - karate.env system property was:  
+20:15:59.366 [main] DEBUG com.intuit.karate - request:
+1 > PUT https://petstore.swagger.io/v2/pet
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 135
+1 > Content-Type: application/json; charset=UTF-8
+1 > Host: petstore.swagger.io
+1 > User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_301)
+1 > accept: application/json
+{"id":2,"category":{"id":2,"name":"Dogs"},"name":"Pitbull","photoUrls":["string"],"tags":[{"id":3,"name":"tag3"}],"status":"available"}
+
+20:16:00.570 [main] DEBUG com.intuit.karate - response time in milliseconds: 1202.31
+1 < 200
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Origin: *
+1 < Connection: keep-alive
+1 < Content-Type: application/json
+1 < Date: Mon, 11 Apr 2022 10:15:59 GMT
+1 < Server: Jetty(9.2.9.v20150224)
+1 < Transfer-Encoding: chunked
+{"id":2,"category":{"id":2,"name":"Dogs"},"name":"Pitbull","photoUrls":["string"],"tags":[{"id":3,"name":"tag3"}],"status":"available"}
+
+20:16:00.570 [main] INFO  com.intuit.karate - [print] {
+  "photoUrls": [
+    "string"
+  ],
+  "name": "Pitbull",
+  "id": 2,
+  "category": {
+    "name": "Dogs",
+    "id": 2
+  },
+  "tags": [
+    {
+      "name": "tag3",
+      "id": 3
+    }
+  ],
+  "status": "available"
+}
+
+20:16:00.585 [main] INFO  com.intuit.karate - karate.env system property was:  
+20:16:00.617 [main] INFO  com.intuit.karate - karate.env system property was:  
+20:18:08.357 [main] INFO  com.intuit.karate.Runner - waiting for parallel features to complete ...
+20:18:08.529 [ForkJoinPool-1-worker-1] INFO  com.intuit.karate - karate.env system property was:  
+20:18:08.655 [ForkJoinPool-1-worker-1] INFO  com.intuit.karate - karate.env system property was:  
+20:18:09.296 [ForkJoinPool-1-worker-1] DEBUG com.intuit.karate - request:
+1 > PUT https://petstore.swagger.io/v2/pet
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 135
+1 > Content-Type: application/json; charset=UTF-8
+1 > Host: petstore.swagger.io
+1 > User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_301)
+1 > accept: application/json
+{"id":2,"category":{"id":2,"name":"Dogs"},"name":"Pitbull","photoUrls":["string"],"tags":[{"id":3,"name":"tag3"}],"status":"available"}
+
+20:18:10.637 [ForkJoinPool-1-worker-1] DEBUG com.intuit.karate - response time in milliseconds: 1332.12
+1 < 200
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Origin: *
+1 < Connection: keep-alive
+1 < Content-Type: application/json
+1 < Date: Mon, 11 Apr 2022 10:18:09 GMT
+1 < Server: Jetty(9.2.9.v20150224)
+1 < Transfer-Encoding: chunked
+{"id":2,"category":{"id":2,"name":"Dogs"},"name":"Pitbull","photoUrls":["string"],"tags":[{"id":3,"name":"tag3"}],"status":"available"}
+
+20:18:10.637 [ForkJoinPool-1-worker-1] INFO  com.intuit.karate - [print] {
+  "photoUrls": [
+    "string"
+  ],
+  "name": "Pitbull",
+  "id": 2,
+  "category": {
+    "name": "Dogs",
+    "id": 2
+  },
+  "tags": [
+    {
+      "name": "tag3",
+      "id": 3
+    }
+  ],
+  "status": "available"
+}
+
+20:18:10.668 [ForkJoinPool-1-worker-1] INFO  com.intuit.karate - karate.env system property was:  
+20:18:10.699 [ForkJoinPool-1-worker-1] INFO  com.intuit.karate - karate.env system property was:  
+20:18:10.762 [pool-1-thread-1] INFO  com.intuit.karate.Runner - <<fail>> feature 1 of 1: src/test/java/examples/petStore/petStoreAPI.feature
+20:19:29.450 [main] INFO  com.intuit.karate - karate.env system property was:  
+20:19:30.090 [main] DEBUG com.intuit.karate - request:
+1 > GET https://petstore.swagger.io/v2/pet/4
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Host: petstore.swagger.io
+1 > User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_301)
+1 > accept: application/json
+1 > api_key: special-key
+
+20:19:31.435 [main] DEBUG com.intuit.karate - response time in milliseconds: 1351.81
+1 < 200
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Origin: *
+1 < Connection: keep-alive
+1 < Content-Type: application/json
+1 < Date: Mon, 11 Apr 2022 10:19:30 GMT
+1 < Server: Jetty(9.2.9.v20150224)
+1 < Transfer-Encoding: chunked
+{"id":4,"category":{"id":2,"name":"Dogs"},"name":"German Shepperd","photoUrls":["string"],"tags":[{"id":2,"name":"tag2"}],"status":"available"}
+
+20:19:31.450 [main] INFO  com.intuit.karate - [print] {
+  "photoUrls": [
+    "string"
+  ],
+  "name": "German Shepperd",
+  "id": 4,
+  "category": {
+    "name": "Dogs",
+    "id": 2
+  },
+  "tags": [
+    {
+      "name": "tag2",
+      "id": 2
+    }
+  ],
+  "status": "available"
+}
+
+20:19:31.497 [main] INFO  com.intuit.karate - [print] {
+  "category": {
+    "id": 2,
+    "name": "Dogs"
+  },
+  "name": "Pitbull",
+  "photoUrls": [
+    "string"
+  ],
+  "tags": [
+    {
+      "id": 3,
+      "name": "tag3"
+    }
+  ],
+  "status": "available",
+  "id": 4
+}
+
+20:19:31.513 [main] DEBUG com.intuit.karate - request:
+2 > PUT https://petstore.swagger.io/v2/pet
+2 > Accept-Encoding: gzip,deflate
+2 > Connection: Keep-Alive
+2 > Content-Length: 135
+2 > Content-Type: application/json; charset=UTF-8
+2 > Host: petstore.swagger.io
+2 > User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_301)
+2 > accept: application/json
+{"category":{"id":2,"name":"Dogs"},"name":"Pitbull","photoUrls":["string"],"tags":[{"id":3,"name":"tag3"}],"status":"available","id":4}
+
+20:19:32.748 [main] DEBUG com.intuit.karate - response time in milliseconds: 1229.18
+2 < 200
+2 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+2 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+2 < Access-Control-Allow-Origin: *
+2 < Connection: keep-alive
+2 < Content-Type: application/json
+2 < Date: Mon, 11 Apr 2022 10:19:31 GMT
+2 < Server: Jetty(9.2.9.v20150224)
+2 < Transfer-Encoding: chunked
+{"id":4,"category":{"id":2,"name":"Dogs"},"name":"Pitbull","photoUrls":["string"],"tags":[{"id":3,"name":"tag3"}],"status":"available"}
+
+20:19:32.748 [main] INFO  com.intuit.karate - [print] {
+  "photoUrls": [
+    "string"
+  ],
+  "name": "Pitbull",
+  "id": 4,
+  "category": {
+    "name": "Dogs",
+    "id": 2
+  },
+  "tags": [
+    {
+      "name": "tag3",
+      "id": 3
+    }
+  ],
+  "status": "available"
+}
+
+20:19:32.763 [main] DEBUG com.intuit.karate - request:
+3 > DELETE https://petstore.swagger.io/v2/pet/4
+3 > Accept-Encoding: gzip,deflate
+3 > Connection: Keep-Alive
+3 > Host: petstore.swagger.io
+3 > User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_301)
+3 > accept: application/json
+3 > api_key: special-key
+
+20:19:33.967 [main] DEBUG com.intuit.karate - response time in milliseconds: 1204.59
+3 < 200
+3 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+3 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+3 < Access-Control-Allow-Origin: *
+3 < Connection: keep-alive
+3 < Content-Type: application/json
+3 < Date: Mon, 11 Apr 2022 10:19:33 GMT
+3 < Server: Jetty(9.2.9.v20150224)
+3 < Transfer-Encoding: chunked
+{"code":200,"type":"unknown","message":"4"}
+
+20:19:33.967 [main] INFO  com.intuit.karate - [print] {
+  "code": 200,
+  "type": "unknown",
+  "message": "4"
+}
+
+20:19:33.983 [main] DEBUG com.intuit.karate - request:
+4 > GET https://petstore.swagger.io/v2/pet/4
+4 > Accept-Encoding: gzip,deflate
+4 > Connection: Keep-Alive
+4 > Host: petstore.swagger.io
+4 > User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_301)
+4 > accept: application/json
+4 > api_key: special-key
+
+20:19:35.092 [main] DEBUG com.intuit.karate - response time in milliseconds: 1111.87
+4 < 404
+4 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+4 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+4 < Access-Control-Allow-Origin: *
+4 < Connection: keep-alive
+4 < Content-Type: application/json
+4 < Date: Mon, 11 Apr 2022 10:19:34 GMT
+4 < Server: Jetty(9.2.9.v20150224)
+4 < Transfer-Encoding: chunked
+{"code":1,"type":"error","message":"Pet not found"}
+
+20:19:35.092 [main] INFO  com.intuit.karate - [print] {
+  "code": 1,
+  "type": "error",
+  "message": "Pet not found"
+}
+
+20:19:35.280 [main] INFO  com.intuit.karate - karate.env system property was:  
+20:19:35.280 [main] DEBUG com.intuit.karate - request:
+1 > GET https://petstore.swagger.io/v2/pet/2
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Host: petstore.swagger.io
+1 > User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_301)
+1 > accept: application/json
+1 > api_key: special-key
+
+20:19:36.452 [main] DEBUG com.intuit.karate - response time in milliseconds: 1172.76
+1 < 200
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Origin: *
+1 < Connection: keep-alive
+1 < Content-Type: application/json
+1 < Date: Mon, 11 Apr 2022 10:19:35 GMT
+1 < Server: Jetty(9.2.9.v20150224)
+1 < Transfer-Encoding: chunked
+{"id":2,"category":{"id":2,"name":"Dogs"},"name":"Pitbull","photoUrls":["string"],"tags":[{"id":3,"name":"tag3"}],"status":"available"}
+
+20:19:36.452 [main] INFO  com.intuit.karate - [print] {
+  "photoUrls": [
+    "string"
+  ],
+  "name": "Pitbull",
+  "id": 2,
+  "category": {
+    "name": "Dogs",
+    "id": 2
+  },
+  "tags": [
+    {
+      "name": "tag3",
+      "id": 3
+    }
+  ],
+  "status": "available"
+}
+
+20:19:36.467 [main] INFO  com.intuit.karate - karate.env system property was:  
+20:19:36.467 [main] DEBUG com.intuit.karate - request:
+1 > PUT https://petstore.swagger.io/v2/pet
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 135
+1 > Content-Type: application/json; charset=UTF-8
+1 > Host: petstore.swagger.io
+1 > User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_301)
+1 > accept: application/json
+{"id":2,"category":{"id":2,"name":"Dogs"},"name":"Pitbull","photoUrls":["string"],"tags":[{"id":3,"name":"tag3"}],"status":"available"}
+
+20:19:37.655 [main] DEBUG com.intuit.karate - response time in milliseconds: 1181.20
+1 < 200
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Origin: *
+1 < Connection: keep-alive
+1 < Content-Type: application/json
+1 < Date: Mon, 11 Apr 2022 10:19:36 GMT
+1 < Server: Jetty(9.2.9.v20150224)
+1 < Transfer-Encoding: chunked
+{"id":2,"category":{"id":2,"name":"Dogs"},"name":"Pitbull","photoUrls":["string"],"tags":[{"id":3,"name":"tag3"}],"status":"available"}
+
+20:19:37.655 [main] INFO  com.intuit.karate - [print] {
+  "photoUrls": [
+    "string"
+  ],
+  "name": "Pitbull",
+  "id": 2,
+  "category": {
+    "name": "Dogs",
+    "id": 2
+  },
+  "tags": [
+    {
+      "name": "tag3",
+      "id": 3
+    }
+  ],
+  "status": "available"
+}
+
+20:19:37.671 [main] INFO  com.intuit.karate - karate.env system property was:  
+20:19:37.686 [main] DEBUG com.intuit.karate - request:
+1 > DELETE https://petstore.swagger.io/v2/pet/2
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Host: petstore.swagger.io
+1 > User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_301)
+1 > accept: application/json
+1 > api_key: special-key
+
+20:19:38.890 [main] DEBUG com.intuit.karate - response time in milliseconds: 1200.02
+1 < 200
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Origin: *
+1 < Connection: keep-alive
+1 < Content-Type: application/json
+1 < Date: Mon, 11 Apr 2022 10:19:38 GMT
+1 < Server: Jetty(9.2.9.v20150224)
+1 < Transfer-Encoding: chunked
+{"code":200,"type":"unknown","message":"2"}
+
+20:19:38.890 [main] INFO  com.intuit.karate - [print] {
+  "code": 200,
+  "type": "unknown",
+  "message": "2"
+}
+
+20:19:38.890 [main] INFO  com.intuit.karate - karate.env system property was:  
+20:19:38.890 [main] DEBUG com.intuit.karate - request:
+1 > GET https://petstore.swagger.io/v2/pet/2
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Host: petstore.swagger.io
+1 > User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_301)
+1 > accept: application/json
+1 > api_key: special-key
+
+20:19:40.016 [main] DEBUG com.intuit.karate - response time in milliseconds: 1117.44
+1 < 404
+1 < Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 < Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 < Access-Control-Allow-Origin: *
+1 < Connection: keep-alive
+1 < Content-Type: application/json
+1 < Date: Mon, 11 Apr 2022 10:19:39 GMT
+1 < Server: Jetty(9.2.9.v20150224)
+1 < Transfer-Encoding: chunked
+{"code":1,"type":"error","message":"Pet not found"}
+
+20:19:40.016 [main] INFO  com.intuit.karate - [print] {
+  "code": 1,
+  "type": "error",
+  "message": "Pet not found"
+}
+

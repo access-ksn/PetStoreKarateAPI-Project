@@ -1,115 +1,177 @@
-<testsuite failures="0" name="src/test/java/examples/petStore/petStoreAPI.feature" skipped="0" tests="4" time="4.310823">
-  <testcase classname="src.test.java.examples.petStore.petStoreAPI" name="find pet by id" time="1.501388">
-    <system-out>* url baseurl ............................................................. passed
+<testsuite failures="3" name="src/test/java/examples/petStore/petStoreAPI.feature" skipped="0" tests="4" time="2.015508">
+  <testcase classname="src.test.java.examples.petStore.petStoreAPI" name="find pet by id" time="0.01712">
+    <failure message="petStoreAPI.feature:33 - evaluation (js) failed: Header, javax.script.ScriptException: ReferenceError: &quot;Header&quot; is not defined in &lt;eval&gt; at line number 1&#10;stack trace: jdk.nashorn.api.scripting.NashornScriptEngine.throwAsScriptException(NashornScriptEngine.java:470)">* url baseurl ............................................................. passed
+* def getHeader = {accept: 'application/json', api_key: 'special-key'} .... passed
+* def updateHeader = {accept: 'application/json', Content-Type: 'application/json'} . passed
 * def reqPayLoad = ........................................................ passed
-* def request_header = {accept: 'application/json', api_key: 'special-key'} . passed
 Given url baseurl+'/v2/pet/' .............................................. passed
 And path '2' .............................................................. passed
-When method GET ........................................................... passed
-Then status 200 ........................................................... passed
-* def petResp = response .................................................. passed
-* print petResp ........................................................... passed
-* def petID = petResp.id .................................................. passed
-* match petID == 2 ........................................................ passed</system-out>
+And headers Header ........................................................ failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: petStoreAPI.feature:33 - evaluation (js) failed: Header, javax.script.ScriptException: ReferenceError: "Header" is not defined in &lt;eval&gt; at line number 1
+stack trace: jdk.nashorn.api.scripting.NashornScriptEngine.throwAsScriptException(NashornScriptEngine.java:470)&#13;
+	at ✽.And headers Header (petStoreAPI.feature:33)&#13;
+
+When method GET ........................................................... skipped
+Then status 200 ........................................................... skipped
+* def getpetResp = response ............................................... skipped
+* print getpetResp ........................................................ skipped
+* def petID = getpetResp.id ............................................... skipped
+* match petID == 2 ........................................................ skipped</failure>
   </testcase>
-  <testcase classname="src.test.java.examples.petStore.petStoreAPI" name="Amend pet name of an existing petID" time="0.936957">
+  <testcase classname="src.test.java.examples.petStore.petStoreAPI" name="Amend pet name of an existing petID" time="1.992718">
     <system-out>* url baseurl ............................................................. passed
+* def getHeader = {accept: 'application/json', api_key: 'special-key'} .... passed
+* def updateHeader = {accept: 'application/json', Content-Type: 'application/json'} . passed
 * def reqPayLoad = ........................................................ passed
-* def request_header = {accept: 'application/json', api_key: 'special-key'} . passed
 Given url baseurl+'/v2/pet/' .............................................. passed
 And path '2' .............................................................. passed
-When method GET ........................................................... passed
-Then status 200 ........................................................... passed
-* def petResp = response .................................................. passed
-* print petResp ........................................................... passed
-* def petID = petResp.id .................................................. passed
-* match petID == 2 ........................................................ passed
+And headers Header ........................................................ failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: petStoreAPI.feature:33 - evaluation (js) failed: Header, javax.script.ScriptException: ReferenceError: "Header" is not defined in &lt;eval&gt; at line number 1
+stack trace: jdk.nashorn.api.scripting.NashornScriptEngine.throwAsScriptException(NashornScriptEngine.java:470)&#13;
+	at ✽.And headers Header (petStoreAPI.feature:33)&#13;
+
+When method GET ........................................................... skipped
+Then status 200 ........................................................... skipped
+* def getpetResp = response ............................................... skipped
+* print getpetResp ........................................................ skipped
+* def petID = getpetResp.id ............................................... skipped
+* match petID == 2 ........................................................ skipped
 * url baseurl ............................................................. passed
+* def getHeader = {accept: 'application/json', api_key: 'special-key'} .... passed
+* def updateHeader = {accept: 'application/json', Content-Type: 'application/json'} . passed
 * def reqPayLoad = ........................................................ passed
-* def request_header = {accept: 'application/json', Content-Type: 'application/json'} . passed
 Given path '/v2/pet' ...................................................... passed
 And request reqPayLoad .................................................... passed
+And headers updateHeader .................................................. passed
 When method PUT ........................................................... passed
 Then status 200 ........................................................... passed
-* def petResp = response .................................................. passed
-* print petResp ........................................................... passed
-* match petResp.name == 'Pitbull' ......................................... passed</system-out>
+* def putpetResp = response ............................................... passed
+* print putpetResp ........................................................ passed
+* match putpetResp.name == 'Pitbull' ...................................... passed</system-out>
   </testcase>
-  <testcase classname="src.test.java.examples.petStore.petStoreAPI" name="delete an existing pet" time="0.936128">
-    <system-out>* url baseurl ............................................................. passed
+  <testcase classname="src.test.java.examples.petStore.petStoreAPI" name="delete an existing pet" time="0.003818">
+    <failure message="petStoreAPI.feature:54 - evaluation (js) failed: Header, javax.script.ScriptException: ReferenceError: &quot;Header&quot; is not defined in &lt;eval&gt; at line number 1&#10;stack trace: jdk.nashorn.api.scripting.NashornScriptEngine.throwAsScriptException(NashornScriptEngine.java:470)">* url baseurl ............................................................. passed
+* def getHeader = {accept: 'application/json', api_key: 'special-key'} .... passed
+* def updateHeader = {accept: 'application/json', Content-Type: 'application/json'} . passed
 * def reqPayLoad = ........................................................ passed
-* def request_header = {accept: 'application/json', api_key: 'special-key'} . passed
 Given url baseurl+'/v2/pet/' .............................................. passed
 And path '2' .............................................................. passed
-When method GET ........................................................... passed
-Then status 200 ........................................................... passed
-* def petResp = response .................................................. passed
-* print petResp ........................................................... passed
-* def petID = petResp.id .................................................. passed
-* match petID == 2 ........................................................ passed
+And headers Header ........................................................ failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: petStoreAPI.feature:33 - evaluation (js) failed: Header, javax.script.ScriptException: ReferenceError: "Header" is not defined in &lt;eval&gt; at line number 1
+stack trace: jdk.nashorn.api.scripting.NashornScriptEngine.throwAsScriptException(NashornScriptEngine.java:470)&#13;
+	at ✽.And headers Header (petStoreAPI.feature:33)&#13;
+
+When method GET ........................................................... skipped
+Then status 200 ........................................................... skipped
+* def getpetResp = response ............................................... skipped
+* print getpetResp ........................................................ skipped
+* def petID = getpetResp.id ............................................... skipped
+* match petID == 2 ........................................................ skipped
 * url baseurl ............................................................. passed
+* def getHeader = {accept: 'application/json', api_key: 'special-key'} .... passed
+* def updateHeader = {accept: 'application/json', Content-Type: 'application/json'} . passed
 * def reqPayLoad = ........................................................ passed
-* def request_header = {accept: 'application/json', Content-Type: 'application/json'} . passed
 Given path '/v2/pet' ...................................................... passed
 And request reqPayLoad .................................................... passed
+And headers updateHeader .................................................. passed
 When method PUT ........................................................... passed
 Then status 200 ........................................................... passed
-* def petResp = response .................................................. passed
-* print petResp ........................................................... passed
-* match petResp.name == 'Pitbull' ......................................... passed
+* def putpetResp = response ............................................... passed
+* print putpetResp ........................................................ passed
+* match putpetResp.name == 'Pitbull' ...................................... passed
 * url baseurl ............................................................. passed
+* def getHeader = {accept: 'application/json', api_key: 'special-key'} .... passed
+* def updateHeader = {accept: 'application/json', Content-Type: 'application/json'} . passed
 * def reqPayLoad = ........................................................ passed
-* def request_header = {accept: 'application/json'} ....................... passed
 Given url baseurl+'/v2/pet/' .............................................. passed
 And path '2' .............................................................. passed
-When method DELETE ........................................................ passed
-Then status 200 ........................................................... passed
-* def petResp = response .................................................. passed
-* print petResp ........................................................... passed
-* match petResp.type == 'unknown' ......................................... passed</system-out>
+And headers Header ........................................................ failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: petStoreAPI.feature:54 - evaluation (js) failed: Header, javax.script.ScriptException: ReferenceError: "Header" is not defined in &lt;eval&gt; at line number 1
+stack trace: jdk.nashorn.api.scripting.NashornScriptEngine.throwAsScriptException(NashornScriptEngine.java:470)&#13;
+	at ✽.And headers Header (petStoreAPI.feature:54)&#13;
+
+When method DELETE ........................................................ skipped
+Then status 200 ........................................................... skipped
+* def deletepetResp = response ............................................ skipped
+* print deletepetResp ..................................................... skipped
+* match deletepetResp.type == 'unknown' ................................... skipped</failure>
   </testcase>
-  <testcase classname="src.test.java.examples.petStore.petStoreAPI" name="find pet by id" time="0.936351">
-    <system-out>* url baseurl ............................................................. passed
+  <testcase classname="src.test.java.examples.petStore.petStoreAPI" name="find pet by id" time="0.001852">
+    <failure message="petStoreAPI.feature:64 - evaluation (js) failed: Header, javax.script.ScriptException: ReferenceError: &quot;Header&quot; is not defined in &lt;eval&gt; at line number 1&#10;stack trace: jdk.nashorn.api.scripting.NashornScriptEngine.throwAsScriptException(NashornScriptEngine.java:470)">* url baseurl ............................................................. passed
+* def getHeader = {accept: 'application/json', api_key: 'special-key'} .... passed
+* def updateHeader = {accept: 'application/json', Content-Type: 'application/json'} . passed
 * def reqPayLoad = ........................................................ passed
-* def request_header = {accept: 'application/json', api_key: 'special-key'} . passed
 Given url baseurl+'/v2/pet/' .............................................. passed
 And path '2' .............................................................. passed
-When method GET ........................................................... passed
-Then status 200 ........................................................... passed
-* def petResp = response .................................................. passed
-* print petResp ........................................................... passed
-* def petID = petResp.id .................................................. passed
-* match petID == 2 ........................................................ passed
+And headers Header ........................................................ failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: petStoreAPI.feature:33 - evaluation (js) failed: Header, javax.script.ScriptException: ReferenceError: "Header" is not defined in &lt;eval&gt; at line number 1
+stack trace: jdk.nashorn.api.scripting.NashornScriptEngine.throwAsScriptException(NashornScriptEngine.java:470)&#13;
+	at ✽.And headers Header (petStoreAPI.feature:33)&#13;
+
+When method GET ........................................................... skipped
+Then status 200 ........................................................... skipped
+* def getpetResp = response ............................................... skipped
+* print getpetResp ........................................................ skipped
+* def petID = getpetResp.id ............................................... skipped
+* match petID == 2 ........................................................ skipped
 * url baseurl ............................................................. passed
+* def getHeader = {accept: 'application/json', api_key: 'special-key'} .... passed
+* def updateHeader = {accept: 'application/json', Content-Type: 'application/json'} . passed
 * def reqPayLoad = ........................................................ passed
-* def request_header = {accept: 'application/json', Content-Type: 'application/json'} . passed
 Given path '/v2/pet' ...................................................... passed
 And request reqPayLoad .................................................... passed
+And headers updateHeader .................................................. passed
 When method PUT ........................................................... passed
 Then status 200 ........................................................... passed
-* def petResp = response .................................................. passed
-* print petResp ........................................................... passed
-* match petResp.name == 'Pitbull' ......................................... passed
+* def putpetResp = response ............................................... passed
+* print putpetResp ........................................................ passed
+* match putpetResp.name == 'Pitbull' ...................................... passed
 * url baseurl ............................................................. passed
+* def getHeader = {accept: 'application/json', api_key: 'special-key'} .... passed
+* def updateHeader = {accept: 'application/json', Content-Type: 'application/json'} . passed
 * def reqPayLoad = ........................................................ passed
-* def request_header = {accept: 'application/json'} ....................... passed
 Given url baseurl+'/v2/pet/' .............................................. passed
 And path '2' .............................................................. passed
-When method DELETE ........................................................ passed
-Then status 200 ........................................................... passed
-* def petResp = response .................................................. passed
-* print petResp ........................................................... passed
-* match petResp.type == 'unknown' ......................................... passed
+And headers Header ........................................................ failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: petStoreAPI.feature:54 - evaluation (js) failed: Header, javax.script.ScriptException: ReferenceError: "Header" is not defined in &lt;eval&gt; at line number 1
+stack trace: jdk.nashorn.api.scripting.NashornScriptEngine.throwAsScriptException(NashornScriptEngine.java:470)&#13;
+	at ✽.And headers Header (petStoreAPI.feature:54)&#13;
+
+When method DELETE ........................................................ skipped
+Then status 200 ........................................................... skipped
+* def deletepetResp = response ............................................ skipped
+* print deletepetResp ..................................................... skipped
+* match deletepetResp.type == 'unknown' ................................... skipped
 * url baseurl ............................................................. passed
+* def getHeader = {accept: 'application/json', api_key: 'special-key'} .... passed
+* def updateHeader = {accept: 'application/json', Content-Type: 'application/json'} . passed
 * def reqPayLoad = ........................................................ passed
-* def request_header = {accept: 'application/json', api_key: 'special-key'} . passed
 Given url baseurl+'/v2/pet/' .............................................. passed
 And path '2' .............................................................. passed
-When method GET ........................................................... passed
-Then status 404 ........................................................... passed
-* def petResp = response .................................................. passed
-* print petResp ........................................................... passed
-* match petResp.type == 'error' ........................................... passed
-* match petResp.message == 'Pet not found' ................................ passed</system-out>
+And headers Header ........................................................ failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: petStoreAPI.feature:64 - evaluation (js) failed: Header, javax.script.ScriptException: ReferenceError: "Header" is not defined in &lt;eval&gt; at line number 1
+stack trace: jdk.nashorn.api.scripting.NashornScriptEngine.throwAsScriptException(NashornScriptEngine.java:470)&#13;
+	at ✽.And headers Header (petStoreAPI.feature:64)&#13;
+
+When method GET ........................................................... skipped
+Then status 404 ........................................................... skipped
+* def retrievepetResp = response .......................................... skipped
+* print retrievepetResp ................................................... skipped
+* match retrievepetResp.type == 'error' ................................... skipped
+* match retrievepetResp.message == 'Pet not found' ........................ skipped</failure>
   </testcase>
 </testsuite>

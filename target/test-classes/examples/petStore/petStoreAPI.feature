@@ -1,7 +1,10 @@
-Feature: pet store API automation
+Feature: End to end workflow for pet store swagger API's
 
   Background:
     * url baseurl
+    * def Header = {accept: 'application/json', api_key: 'special-key'}
+    * def updateHeader = {accept: 'application/json', Content-Type: 'application/json'}
+
     * def reqPayLoad =
     """
     {
@@ -24,47 +27,46 @@ Feature: pet store API automation
     }
     """
 
-
   Scenario: find pet by id
-    * def request_header = {accept: 'application/json', api_key: 'special-key'}
     Given url baseurl+'/v2/pet/'
     And path '2'
+    And headers Header
     When method GET
     Then status 200
-    * def petResp = response
-    * print petResp
-    * def petID = petResp.id
+    * def getpetResp = response
+    * print getpetResp
+    * def petID = getpetResp.id
     * match petID == 2
 
   Scenario: Amend pet name of an existing petID
-    * def request_header = {accept: 'application/json', Content-Type: 'application/json'}
     Given path '/v2/pet'
     And request reqPayLoad
+    And headers updateHeader
     When method PUT
     Then status 200
-    * def petResp = response
-    * print petResp
-    * match petResp.name == 'Pitbull'
+    * def putpetResp = response
+    * print putpetResp
+    * match putpetResp.name == 'Pitbull'
 
   Scenario: delete an existing pet
-    * def request_header = {accept: 'application/json'}
     Given url baseurl+'/v2/pet/'
     And path '2'
+    And headers Header
     When method DELETE
     Then status 200
-    * def petResp = response
-    * print petResp
-    * match petResp.type == 'unknown'
+    * def deletepetResp = response
+    * print deletepetResp
+    * match deletepetResp.type == 'unknown'
 
   Scenario: find pet by id
-    * def request_header = {accept: 'application/json', api_key: 'special-key'}
     Given url baseurl+'/v2/pet/'
     And path '2'
+    And headers Header
     When method GET
     Then status 404
-    * def petResp = response
-    * print petResp
-    * match petResp.type == 'error'
-    * match petResp.message == 'Pet not found'
+    * def retrievepetResp = response
+    * print retrievepetResp
+    * match retrievepetResp.type == 'error'
+    * match retrievepetResp.message == 'Pet not found'
 
 
